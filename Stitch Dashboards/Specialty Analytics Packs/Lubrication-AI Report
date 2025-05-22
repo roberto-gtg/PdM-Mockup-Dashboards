@@ -1,0 +1,211 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .confidence-bar::-webkit-progress-bar {
+            background-color: #40484f;}
+        .confidence-bar::-webkit-progress-value {
+            background-color: #dce8f3;}
+        .confidence-bar::-moz-progress-bar {
+            background-color: #dce8f3;}
+        .confidence-bar-degrading::-webkit-progress-value {
+            background-color: #FF6B6B;}
+        .confidence-bar-degrading::-moz-progress-bar {
+            background-color: #FF6B6B;
+        }
+         .table-header-text {
+            color: #dce8f3;}
+        .table-body-text {
+            color: #dce8f3;}
+        .table-subtle-text {
+            color: #a2abb3;}
+    </style>
+</head>
+<body class="bg-[#121416] text-[#dce8f3]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="w-72 bg-[#1a1d21] p-6 flex flex-col justify-between">
+<div>
+<div class="mb-8">
+<img alt="Roy Hill Logo" class="h-10 mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7O2g8b8CqSZrLVFZ-z9Z78-SRgbS5TZvW2jyhoZbM52M_CgOAZeTHlzSgLnTRlaZW8mvuVgHU74ai3sVjx9DSVrl0o1sv6wFFlaI_6H0J5mL9phZRLXJMYsbuKWwrrMMSMOcxQj8K2dGuW-8U5xUVbprBrDpeyl01ZewHvCmQvh0-sGZjzU6x0UPeGai8X-XbezgBPHnL4g6AoCLy8a-S7hBmsbAosNCQvzqNW19LGy7x9Tqi7YdHGLv6O-S1b3AXJcbLZVTgVnQ"/> 
+<h1 class="text-[#dce8f3] text-xl font-bold leading-normal">Predictive Maintenance</h1>
+<p class="text-[#a2abb3] text-sm font-normal leading-normal">Roy Hill</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-[#2c3135] transition-colors" href="#">
+<svg class="text-[#dce8f3]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+</svg>
+<span class="text-[#dce8f3] text-base font-medium leading-normal">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-[#2c3135] transition-colors" href="#">
+<svg class="text-[#dce8f3]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.76,42A8,8,0,0,0,32,48V216a8,8,0,0,0,16,0V171.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V48A8,8,0,0,0,210.76,42c-28,24.23-51.72,12.49-79.21-1.12C103.07,26.76,70.78,10.79,34.76,42ZM208,164.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V51.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"></path>
+</svg>
+<span class="text-[#dce8f3] text-base font-medium leading-normal">Anomalies</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-[#0052cc] text-white transition-colors" href="#"> 
+<svg class="text-white" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128A96,96,0,0,1,62.11,197.82a8,8,0,1,1,11-11.64A80,80,0,1,0,71.43,71.43C67.9,75,64.58,78.51,61.35,82L77.66,98.34A8,8,0,0,1,72,112H32a8,8,0,0,1-8-8V64a8,8,0,0,1,13.66-5.66L50,70.7c3.22-3.49,6.54-7,10.06-10.55A96,96,0,0,1,224,128ZM128,72a8,8,0,0,0-8,8v48a8,8,0,0,0,3.88,6.86l40,24a8,8,0,1,0,8.24-13.72L136,123.47V80A8,8,0,0,0,128,72Z"></path>
+</svg>
+<span class="text-white text-base font-medium leading-normal">Predictions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-[#2c3135] transition-colors" href="#">
+<svg class="text-[#dce8f3]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"></path>
+</svg>
+<span class="text-[#dce8f3] text-base font-medium leading-normal">Reports</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-[#2c3135] transition-colors" href="#">
+<svg class="text-[#dce8f3]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+</svg>
+<span class="text-[#dce8f3] text-base font-medium leading-normal">Settings</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 bg-[#121416]">
+<header class="mb-8">
+<h1 class="text-[#dce8f3] text-4xl font-bold leading-tight tracking-tight">Predictions</h1>
+</header>
+<section>
+<h2 class="text-[#dce8f3] text-2xl font-semibold leading-tight tracking-tight mb-6">Bearing Degradation</h2>
+<div class="overflow-x-auto @container bg-[#1a1d21] rounded-xl shadow-lg border border-[#2c3135]">
+<table class="min-w-full divide-y divide-[#2c3135]">
+<thead class="bg-[#1e2124]">
+<tr>
+<th class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 text-left text-xs font-medium table-header-text uppercase tracking-wider" scope="col">Equipment</th>
+<th class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 text-left text-xs font-medium table-header-text uppercase tracking-wider" scope="col">Component</th>
+<th class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 text-left text-xs font-medium table-header-text uppercase tracking-wider" scope="col">Prediction</th>
+<th class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 text-left text-xs font-medium table-header-text uppercase tracking-wider" scope="col">Confidence</th>
+<th class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 text-left text-xs font-medium table-header-text uppercase tracking-wider" scope="col">
+                        Last Updated
+                      </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#2c3135]">
+<tr>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium table-body-text">Excavator 1</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        Bearing 1
+                      </td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#FF6B6B] text-white">
+                          Degrading
+                        </span>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 whitespace-nowrap text-sm table-body-text">
+<div class="flex items-center gap-2">
+<progress class="w-24 h-2 rounded-full confidence-bar confidence-bar-degrading" max="100" value="85"></progress>
+<span>85%</span>
+</div>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        2023-09-20
+                      </td>
+</tr>
+<tr>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium table-body-text">Excavator 2</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        Bearing 2
+                      </td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#FF6B6B] text-white">
+                          Degrading
+                        </span>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 whitespace-nowrap text-sm table-body-text">
+<div class="flex items-center gap-2">
+<progress class="w-24 h-2 rounded-full confidence-bar confidence-bar-degrading" max="100" value="70"></progress>
+<span>70%</span>
+</div>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        2023-09-20
+                      </td>
+</tr>
+<tr>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium table-body-text">Excavator 3</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        Bearing 3
+                      </td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#4CAF50] text-white"> 
+                          Stable
+                        </span>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 whitespace-nowrap text-sm table-body-text">
+<div class="flex items-center gap-2">
+<progress class="w-24 h-2 rounded-full confidence-bar" max="100" value="95"></progress>
+<span>95%</span>
+</div>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        2023-09-20
+                      </td>
+</tr>
+<tr>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium table-body-text">Excavator 4</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        Bearing 4
+                      </td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#4CAF50] text-white">
+                          Stable
+                        </span>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 whitespace-nowrap text-sm table-body-text">
+<div class="flex items-center gap-2">
+<progress class="w-24 h-2 rounded-full confidence-bar" max="100" value="90"></progress>
+<span>90%</span>
+</div>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        2023-09-20
+                      </td>
+</tr>
+<tr>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium table-body-text">Excavator 5</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        Bearing 5
+                      </td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360 px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-[#FF6B6B] text-white">
+                          Degrading
+                        </span>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480 px-6 py-4 whitespace-nowrap text-sm table-body-text">
+<div class="flex items-center gap-2">
+<progress class="w-24 h-2 rounded-full confidence-bar confidence-bar-degrading" max="100" value="80"></progress>
+<span>80%</span>
+</div>
+</td>
+<td class="table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600 px-6 py-4 whitespace-nowrap text-sm table-subtle-text">
+                        2023-09-20
+                      </td>
+</tr>
+</tbody>
+</table>
+<style>
+                          @container(max-width:120px){.table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-120{display: none;}}
+                @container(max-width:240px){.table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-240{display: none;}}
+                @container(max-width:360px){.table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-360{display: none;}}
+                @container(max-width:480px){.table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-480{display: none;}}
+                @container(max-width:600px){.table-a55aed44-edd6-4bb7-bcdc-4cff589abbcb-column-600{display: none;}}
+              </style>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+
+</body></html>

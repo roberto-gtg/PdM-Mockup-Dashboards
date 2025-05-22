@@ -1,0 +1,94 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Root Cause Explorer - Predictive Maintenance</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link rel="stylesheet" href="../../css/toolbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+      .material-icons {
+        font-size: inherit;}
+    </style>
+</head>
+<body class="bg-[#111518] pt-16 md:pt-20" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div id="toolbar-container"></div>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<main class="px-6 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8 bg-[#181e22]">
+<div class="layout-content-container flex flex-col max-w-4xl flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">Predictive Maintenance Explorer</h1>
+<p class="text-[#9cabba] text-sm font-normal leading-normal">Explore potential failure modes and their causes using AI-driven insights.</p>
+</div>
+</div>
+<div class="px-4 py-3 mb-6">
+<label class="flex flex-col w-full">
+<div class="relative flex w-full items-center">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#9cabba]" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+<span class="material-icons" style="font-size: 24px;">search</span>
+</div>
+<input class="form-input w-full rounded-xl text-white bg-[#283139] border-transparent focus:border-[#0b80ee] focus:ring-1 focus:ring-[#0b80ee] h-12 placeholder:text-[#9cabba] pl-12 pr-4 text-base font-normal leading-normal" placeholder="Search for equipment, failure modes, or symptoms" value=""/>
+</div>
+</label>
+</div>
+<section class="mb-8">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-tight px-4 pb-3 pt-5">Failure Tree Explorer</h2>
+<div class="px-4 py-3">
+<div class="w-full bg-center bg-no-repeat aspect-[16/7] bg-cover rounded-xl object-cover border border-[#283139] shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpX3977aLpYVHgOdY-4z8WL-OJ0dklba3MSqIGQDJc5p0ZC4Z_0MGWWZVkihacRqsZ3oaRquCf4BZS3UpJVNBhTu0kZ-GHa26vhX5jYGxuwqflsLNRGNkIfyEsSx0WcHx2WVlbkMpj95HbU9e13JupaxJGxb2kLgMBYCgdXg90yhNuxF4F_J1ZNtYrBTOZzwsYX2Aj1H7oVjfVCIy3UlzVeKqXHwA4Fbc5uPgr3GagGlUqivOjhzmE3jTLDBHMjEOBBUiFnGYJn10");'></div>
+</div>
+<p class="text-[#c0c0c0] text-base font-normal leading-relaxed pb-3 pt-2 px-4">
+                Select a location on the map to explore potential failure modes for equipment in that area. The failure tree will display potential causes and their likelihood based on sensor data and maintenance records.
+              </p>
+</section>
+<section class="mb-8 p-4 bg-[#111518] rounded-lg shadow">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-tight pb-4">Equipment Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-[minmax(120px,auto)_1fr] gap-x-6 gap-y-4">
+<div class="col-span-1 md:col-span-2 grid grid-cols-subgrid border-t border-t-[#3b4854] py-4">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Equipment ID</p>
+<p class="text-white text-sm font-normal leading-normal">EQ-12345</p>
+</div>
+<div class="col-span-1 md:col-span-2 grid grid-cols-subgrid border-t border-t-[#3b4854] py-4">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Location</p>
+<p class="text-white text-sm font-normal leading-normal">Crusher 3, Zone A</p>
+</div>
+<div class="col-span-1 md:col-span-2 grid grid-cols-subgrid border-t border-t-[#3b4854] py-4 border-b border-b-[#3b4854]">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Last Maintenance</p>
+<p class="text-white text-sm font-normal leading-normal">2023-10-26</p>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-tight px-4 pb-3 pt-5">Failure Tree</h2>
+<p class="text-[#c0c0c0] text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+                This tree shows potential failure modes for the selected equipment, along with their likelihood and contributing factors. Click on a node to expand it and explore further.
+              </p>
+<div class="p-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl border border-[#283139] shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQpybryLK9Os0cNGkELiHTVQUv5bZu7TFZoBwef8wfsx6P_EmD45Qa6vzL4XW_ZK2H8ba1a2SbMSlroBc7Rl0BXFe1FT0rjcsD1tQbhlfb8VctdhDbbDxqthWg69ZZ1uC88lmQjEN7yA9eX4eP_CTmmwRc2jn3A-LKMmvmPfEl4gwW7wHaKuaIF-g6Q54AIBAQ4bzOxyVGxBHPd5Oe3Nn_e4ZR68pKlWVtQXoUqqoR3GQ5qC88LNJMYbBo4lW7TK2IfjDwrqX_gZM");'></div>
+</div>
+</section>
+<section class="mb-8 p-6 bg-[#1f2937] rounded-lg shadow-lg">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-tight pb-3">Insights &amp; Recommendations</h2>
+<p class="text-[#d1d5db] text-base font-normal leading-relaxed mb-4">
+                Based on the failure tree analysis, the most likely failure mode for this equipment is <strong class="text-white">'Bearing Failure'</strong> with a likelihood of <strong class="text-[#0b80ee] font-bold">35%</strong>.
+              </p>
+<div class="space-y-2 text-[#d1d5db]">
+<p><strong class="text-white">Contributing Factors:</strong> High vibration levels, inadequate lubrication, and excessive load.</p>
+<p><strong class="text-white">Recommended Actions:</strong> Schedule a maintenance check, adjust lubrication levels, and monitor vibration data closely.</p>
+</div>
+</section>
+<div class="flex px-4 py-6 justify-start">
+<button class="flex items-center justify-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer overflow-hidden rounded-lg h-11 px-6 bg-[#0b80ee] hover:bg-[#0069cc] text-white text-base font-semibold leading-normal tracking-wide transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#0b80ee] focus:ring-opacity-50">
+<span class="material-icons" style="font-size: 20px;">assessment</span>
+<span class="truncate">Generate Report</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+    <script src="../../js/toolbar-loader.js"></script>
+</body></html> 

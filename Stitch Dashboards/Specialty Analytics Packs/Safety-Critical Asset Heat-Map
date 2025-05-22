@@ -1,0 +1,272 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B600%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --rh-primary: 220 30% 90%;--rh-secondary: 30 80% 60%;--rh-accent: 200 60% 50%;--rh-text-primary: 210 10% 95%;--rh-text-secondary: 210 10% 75%;--rh-bg-dark: 220 10% 10%;--rh-bg-medium: 220 10% 15%;--rh-bg-light: 220 10% 20%;--rh-border: 220 10% 30%;}
+        body {
+          @apply bg-rh-bg-dark text-rh-text-primary font-space-grotesk;
+        }
+      }
+      .risk-critical { @apply bg-red-700 text-white; }
+      .risk-high { @apply bg-orange-500 text-white; }
+      .risk-medium { @apply bg-yellow-500 text-black; }
+      .risk-low { @apply bg-green-600 text-white; }
+      .nav-item {
+        @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-rh-text-secondary hover:bg-rh-bg-light hover:text-rh-text-primary transition-colors duration-150;
+      }
+      .nav-item.active {
+        @apply bg-rh-accent text-white font-semibold shadow-lg;
+      }
+      .nav-item svg {
+        @apply fill-current;
+      }
+    </style>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'rh-primary': 'hsl(var(--rh-primary) / <alpha-value>)',
+              'rh-secondary': 'hsl(var(--rh-secondary) / <alpha-value>)',
+              'rh-accent': 'hsl(var(--rh-accent) / <alpha-value>)',
+              'rh-text-primary': 'hsl(var(--rh-text-primary) / <alpha-value>)',
+              'rh-text-secondary': 'hsl(var(--rh-text-secondary) / <alpha-value>)',
+              'rh-bg-dark': 'hsl(var(--rh-bg-dark) / <alpha-value>)',
+              'rh-bg-medium': 'hsl(var(--rh-bg-medium) / <alpha-value>)',
+              'rh-bg-light': 'hsl(var(--rh-bg-light) / <alpha-value>)',
+              'rh-border': 'hsl(var(--rh-border) / <alpha-value>)',
+            },
+            fontFamily: {
+             'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
+             'noto-sans': ['"Noto Sans"', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col bg-rh-bg-dark dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex flex-col w-72 bg-rh-bg-medium p-6 border-r border-rh-border">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Roy Hill Logo" class="h-10 w-10 rounded-full object-cover border-2 border-rh-accent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNyg6BFpmBe6sSBWNwKF_IxO9ffmyiqf-wCLwFSfWkGjJGFQ1qYzLTEw2Y3POujJa7d5Tr286HKGp-Qhww7zNH9bzW9IgdSNzSFLI0oD1aZA7tg256Ut6Twm0s0vi64i_-XDiOu1y6BEcm3Sgq2LfWLN2m_Mnj8F4jpMB302B54us3bi-W17LPR2z01HVvJILkZxZhRqpraCsDMsjCYJ3m6WxdexC1zOT_ysMLqqhjhIH9I0QxKuxtCR3JuA9PY-3Wj_mmVGXaB9o"/>
+<h1 class="text-rh-text-primary text-xl font-semibold leading-normal">Roy Hill</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="nav-item" href="#">
+<svg height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path>
+</svg>
+<p class="text-sm font-medium leading-normal">Overview</p>
+</a>
+<a class="nav-item active" href="#">
+<svg height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM104,144a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32,0a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32,0a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+</svg>
+<p class="text-sm font-medium leading-normal">Risk Matrix</p>
+</a>
+<a class="nav-item" href="#">
+<svg height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+</svg>
+<p class="text-sm font-medium leading-normal">Personnel Exposure</p>
+</a>
+<a class="nav-item" href="#">
+<svg height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path>
+</svg>
+<p class="text-sm font-medium leading-normal">Safety Priorities</p>
+</a>
+<a class="nav-item" href="#">
+<svg height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+</svg>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+<div class="mt-auto flex items-center gap-3 p-3 bg-rh-bg-light rounded-lg">
+<img alt="User Avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeoFRqmT6hPG_RUx9MF1vrbj01XaLIqGDAKG37R5gHQdMITRKrD_FqCLo5yRY--KwijRev3lWksLv_-kzBrnHqlTSu_47ZL2YJaT0X5exvpKxghMSmFiqhLs2sCOc-IZpWlguCqR1jGwgM6ljo5MbZdTqvMeLfm_ynEHKDWHgsKEcj7ampt2zO-0dslZaQ3-JUyYpnz7hEBp-vzxu3ENXHoQt-WjrsToeJRnwPiWJSmsj-mZykxARGW75SZ9iF6CLKKgn2lW9u4hk"/>
+<div>
+<p class="text-rh-text-primary text-sm font-semibold">John Doe</p>
+<p class="text-rh-text-secondary text-xs">Operator</p>
+</div>
+<button class="ml-auto text-rh-text-secondary hover:text-rh-text-primary">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M168.78,200.78a8,8,0,0,1,0,11.32l-8,8a8,8,0,0,1-11.32,0l-24-24-24,24a8,8,0,0,1-11.32,0l-8-8a8,8,0,0,1,0-11.32L112.69,176,89.37,152.63a8,8,0,0,1,0-11.31l8-8a8,8,0,0,1,11.32,0l24,24,24-24a8,8,0,0,1,11.32,0l8,8a8,8,0,0,1,0,11.31L143.31,176ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+</button>
+</div>
+</aside>
+<main class="layout-content-container flex flex-col flex-1 p-8 overflow-y-auto">
+<header class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<p class="text-rh-text-primary tracking-tight text-3xl font-bold leading-tight">Risk Matrix</p>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-rh-bg-medium hover:bg-rh-bg-light text-rh-text-secondary hover:text-rh-text-primary transition-colors">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+<span>Add New Asset</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-rh-accent text-white hover:opacity-90 transition-opacity">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M213.66,101.66,134.34,22.34a8,8,0,0,0-11.32,0L22.34,123A8,8,0,0,0,28,138.34l99-99a8,8,0,0,1,11.32,0L239,138.34A8,8,0,0,0,244.69,123l-21.06-21.07,10.03-10a8,8,0,1,0-11.32-11.31ZM128,144l-99.66-99.66a8,8,0,0,0-11.32,0L14.34,47A8,8,0,0,0,20,62.34l108,108,84.69-84.68a8,8,0,0,0-11.32-11.32L128,148.69l-10.34-10.35a8,8,0,0,0-11.32,11.32L122.34,165.66a8,8,0,0,0,11.32,0L228.34,71A8,8,0,0,0,217,59.66Z"></path></svg>
+<span>Export Data</span>
+</button>
+</div>
+</header>
+<h2 class="text-rh-text-primary text-xl font-semibold leading-tight tracking-tight px-1 pb-4 pt-2">AI Risk Score vs. FMEA Severity</h2>
+<div class="bg-rh-bg-medium rounded-xl border border-rh-border shadow-xl @container">
+<div class="overflow-x-auto">
+<table class="min-w-full">
+<thead class="bg-rh-bg-light">
+<tr>
+<th class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 text-left text-xs font-semibold text-rh-text-secondary uppercase tracking-wider w-[30%]">Asset</th>
+<th class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 text-left text-xs font-semibold text-rh-text-secondary uppercase tracking-wider w-[15%]">AI Risk Score</th>
+<th class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 text-left text-xs font-semibold text-rh-text-secondary uppercase tracking-wider w-[15%]">FMEA Severity</th>
+<th class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 text-left text-xs font-semibold text-rh-text-secondary uppercase tracking-wider w-[20%]">Risk Level</th>
+<th class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 text-left text-xs font-semibold text-rh-text-secondary uppercase tracking-wider w-[20%] text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-rh-border">
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Excavator 1</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">85</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">High</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-critical">Critical</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Drill Rig 2</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">72</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Medium</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-high">High</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Crusher 3</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">90</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">High</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-critical">Critical</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Conveyor 4</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">60</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Low</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-medium">Medium</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Loader 5</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">78</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Medium</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-high">High</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Haul Truck 6</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">88</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">High</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-critical">Critical</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Grader 7</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">55</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Low</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-medium">Medium</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Dozer 8</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">65</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Medium</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-medium">Medium</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Water Truck 9</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">40</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Low</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-low">Low</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+<tr class="hover:bg-rh-bg-light transition-colors duration-150">
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-rh-text-primary">Service Truck 10</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">50</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360 px-6 py-4 whitespace-nowrap text-sm text-rh-text-secondary">Low</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full risk-medium">Medium</span>
+</td>
+<td class="table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+<a class="text-rh-accent hover:text-rh-primary" href="#">View Details</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                @container(max-width:768px) {
+                  .table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-360,.table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-240{
+                    display: none;
+                  }
+                }
+                @container(max-width:640px) {
+                  .table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-480{
+                    display: none;
+                  }
+                }
+                 @container(max-width:480px) {
+                  .table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-120{}
+                   .table-b6bbe04d-da5a-4d20-b726-171e12b4e8a4-column-600{}
+                }
+              </style>
+</div>
+<footer class="mt-auto pt-8 text-center text-xs text-rh-text-secondary">
+                © 2024 Roy Hill Predictive Maintenance Dashboard. All rights reserved.
+            </footer>
+</main>
+</div>
+</div>
+</div>
+
+</body></html>

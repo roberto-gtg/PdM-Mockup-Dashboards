@@ -1,0 +1,294 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<title>Rail & Port Equipment - Predictive Maintenance</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../../css/toolbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --rh-primary: #FFD700;--rh-secondary: #DAA520;--rh-dark-bg: #1A1A1A;--rh-bg: #2C2C2C;--rh-surface: #383838;--rh-border: #4A4A4A;--rh-text-primary: #FFFFFF;
+          --rh-text-secondary: #B0B0B0;--rh-text-muted: #808080;--rh-success: #28A745;--rh-warning: #FFC107;--rh-danger: #DC3545;--rh-info: #17A2B8;}
+        body {
+          font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+          background-color: var(--rh-dark-bg);
+          color: var(--rh-text-primary);
+        }
+        .rh-card {
+          @apply bg-rh-surface border border-rh-border rounded-xl p-6 shadow-lg;
+        }
+        .rh-button {
+          @apply bg-rh-primary text-rh-dark-bg font-bold py-2 px-4 rounded-lg hover:bg-rh-secondary transition-colors duration-300;
+        }
+        .rh-input {
+          @apply form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-rh-text-primary focus:outline-0 focus:ring-2 focus:ring-rh-primary border-none bg-rh-bg h-full placeholder:text-rh-text-muted px-4 text-base font-normal leading-normal;
+        }
+        .rh-table th {
+          @apply px-6 py-3 text-left text-xs font-medium text-rh-text-secondary uppercase tracking-wider bg-rh-bg;
+        }
+        .rh-table td {
+          @apply px-6 py-4 whitespace-nowrap text-sm text-rh-text-primary;
+        }
+        .rh-table tbody tr:nth-child(even) {
+          background-color: var(--rh-surface);
+        }
+         .rh-table tbody tr:nth-child(odd) {
+          background-color: var(--rh-bg);
+        }
+        .rh-table tbody tr {
+           border-top-width: 1px;
+           border-color: var(--rh-border);
+        }
+      }
+    </style>
+</head>
+<body class="bg-rh-dark-bg">
+<div id="toolbar-container"></div>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden pt-16 md:pt-20">
+<div class="layout-container flex h-full grow flex-col">
+<main class="px-6 sm:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8 bg-rh-dark-bg">
+<div class="layout-content-container flex flex-col w-full max-w-screen-xl">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-rh-text-primary text-3xl font-bold leading-tight">Rail &amp; Port Equipment Health</h1>
+<p class="text-rh-text-secondary text-sm font-normal leading-normal">Monitoring locomotives, wagons, ship loaders, and stacker/reclaimers. Last refresh: <span class="text-rh-primary font-semibold">Just now</span></p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm text-rh-text-muted">Refresh Rate:</span>
+<select class="rh-input !h-9 !py-1 !px-3 !text-sm !w-auto rounded-md">
+<option>10 seconds</option>
+<option>30 seconds</option>
+<option selected="">1 minute</option>
+<option>5 minutes</option>
+</select>
+</div>
+</div>
+<section class="mb-8">
+<h2 class="text-rh-text-primary text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-rh-primary">train</span>Locomotive Fleet Overview
+              </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="rh-card">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Loco #101 Bearing Temp</p>
+<p class="text-rh-success text-3xl font-bold leading-tight">Normal</p>
+<p class="text-rh-success text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">thermostat</span> 45°C
+                  </p>
+</div>
+<div class="rh-card border-l-4 border-rh-warning">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Loco #105 Bearing Temp</p>
+<p class="text-rh-warning text-3xl font-bold leading-tight">Elevated</p>
+<p class="text-rh-warning text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">thermostat_auto</span> 62°C
+                  </p>
+</div>
+<div class="rh-card border-l-4 border-rh-danger">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Loco #112 Drive Motor</p>
+<p class="text-rh-danger text-3xl font-bold leading-tight">Anomaly</p>
+<p class="text-rh-danger text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">electric_bolt</span> High Current Draw
+                  </p>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h3 class="text-rh-text-primary text-xl font-medium leading-tight tracking-tight px-4 pb-4 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-rh-info">device_thermostat</span>Bearing Temperature Trends
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+<div class="rh-card">
+<p class="text-rh-text-primary text-base font-medium leading-normal">Loco #101 - Bearing Set A</p>
+<p class="text-rh-text-primary tracking-light text-4xl font-bold leading-tight truncate">45 <span class="text-lg font-normal text-rh-text-muted">°C</span></p>
+<div class="flex gap-1 items-center text-sm mt-1">
+<p class="text-rh-text-secondary">Last 24 Hours:</p>
+<p class="text-rh-success font-medium flex items-center"><span class="material-symbols-outlined text-base">arrow_downward</span>-2°C</p>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 pt-6 pb-2">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="tempGradient1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--rh-success); stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:var(--rh-success); stop-opacity:0.05"></stop>
+</linearGradient>
+</defs>
+<path d="M0 75C18.1538 75 18.1538 65 36.3077 65C54.4615 65 54.4615 70 72.6154 70C90.7692 70 90.7692 60 108.923 60C127.077 60 127.077 50 145.231 50C163.385 50 163.385 45 181.538 45C199.692 45 199.692 40 217.846 40C236 40 236 35 254.154 35C272.308 35 272.308 40 290.462 40C308.615 40 308.615 42 326.769 42C344.923 42 344.923 45 363.077 45C381.231 45 381.231 43 399.385 43C417.538 43 417.538 40 435.692 40C453.846 40 453.846 38 472 38 L 472 150 L 0 150 Z" fill="url(#tempGradient1)"></path>
+<path d="M0 75C18.1538 75 18.1538 65 36.3077 65C54.4615 65 54.4615 70 72.6154 70C90.7692 70 90.7692 60 108.923 60C127.077 60 127.077 50 145.231 50C163.385 50 163.385 45 181.538 45C199.692 45 199.692 40 217.846 40C236 40 236 35 254.154 35C272.308 35 272.308 40 290.462 40C308.615 40 308.615 42 326.769 42C344.923 42 344.923 45 363.077 45C381.231 45 381.231 43 399.385 43C417.538 43 417.538 40 435.692 40C453.846 40 453.846 38 472 38" stroke="var(--rh-success)" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<div class="flex justify-between text-xs text-rh-text-muted font-medium">
+<span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>24:00</span>
+</div>
+</div>
+</div>
+<div class="rh-card">
+<p class="text-rh-text-primary text-base font-medium leading-normal">Loco #105 - Bearing Set C</p>
+<p class="text-rh-text-primary tracking-light text-4xl font-bold leading-tight truncate">62 <span class="text-lg font-normal text-rh-text-muted">°C</span></p>
+<div class="flex gap-1 items-center text-sm mt-1">
+<p class="text-rh-text-secondary">Last 24 Hours:</p>
+<p class="text-rh-warning font-medium flex items-center"><span class="material-symbols-outlined text-base">trending_up</span>+5°C</p>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 pt-6 pb-2">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="tempGradient2" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--rh-warning); stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:var(--rh-warning); stop-opacity:0.05"></stop>
+</linearGradient>
+</defs>
+<path d="M0 40C18.1538 40 18.1538 45 36.3077 45C54.4615 45 54.4615 50 72.6154 50C90.7692 50 90.7692 55 108.923 55C127.077 55 127.077 60 145.231 60C163.385 60 163.385 65 181.538 65C199.692 65 199.692 70 217.846 70C236 70 236 75 254.154 75C272.308 75 272.308 80 290.462 80C308.615 80 308.615 85 326.769 85C344.923 85 344.923 90 363.077 90C381.231 90 381.231 95 399.385 95C417.538 95 417.538 100 435.692 100C453.846 100 453.846 105 472 105 L 472 150 L 0 150 Z" fill="url(#tempGradient2)"></path>
+<path d="M0 40C18.1538 40 18.1538 45 36.3077 45C54.4615 45 54.4615 50 72.6154 50C90.7692 50 90.7692 55 108.923 55C127.077 55 127.077 60 145.231 60C163.385 60 163.385 65 181.538 65C199.692 65 199.692 70 217.846 70C236 70 236 75 254.154 75C272.308 75 272.308 80 290.462 80C308.615 80 308.615 85 326.769 85C344.923 85 344.923 90 363.077 90C381.231 90 381.231 95 399.385 95C417.538 95 417.538 100 435.692 100C453.846 100 453.846 105 472 105" stroke="var(--rh-warning)" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<div class="flex justify-between text-xs text-rh-text-muted font-medium">
+<span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>24:00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-rh-text-primary text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-rh-primary">construction</span>Port Equipment Health
+              </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="rh-card">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Ship Loader #1 Hydraulic Pressure</p>
+<p class="text-rh-success text-3xl font-bold leading-tight">Stable</p>
+<p class="text-rh-success text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">compress</span> 200 bar
+                  </p>
+</div>
+<div class="rh-card border-l-4 border-rh-warning">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Stacker/Reclaimer #2 Slew Bearing</p>
+<p class="text-rh-warning text-3xl font-bold leading-tight">Wear Detected</p>
+<p class="text-rh-warning text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">data_usage</span> 0.8mm play
+                  </p>
+</div>
+<div class="rh-card">
+<p class="text-rh-text-secondary text-sm font-medium leading-normal mb-1">Wagon Dumper #3 Cycle Time</p>
+<p class="text-rh-success text-3xl font-bold leading-tight">Optimal</p>
+<p class="text-rh-success text-sm font-medium leading-normal mt-1 flex items-center">
+<span class="material-symbols-outlined text-lg mr-0.5">timer</span> 120s
+                  </p>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h3 class="text-rh-text-primary text-xl font-medium leading-tight tracking-tight px-4 pb-4 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-rh-info">electrical_services</span>Drive Motor Anomalies
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+<div class="rh-card">
+<p class="text-rh-text-primary text-base font-medium leading-normal">Loco #112 - Drive Motor 1</p>
+<p class="text-rh-text-primary tracking-light text-4xl font-bold leading-tight truncate">High <span class="text-lg font-normal text-rh-text-muted">Current</span></p>
+<div class="flex gap-1 items-center text-sm mt-1">
+<p class="text-rh-text-secondary">Last 24 Hours:</p>
+<p class="text-rh-danger font-medium flex items-center"><span class="material-symbols-outlined text-base">trending_up</span>+15% Peak</p>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 pt-6 pb-2">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="motorGradient1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--rh-danger); stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:var(--rh-danger); stop-opacity:0.05"></stop>
+</linearGradient>
+</defs>
+<path d="M0 100C18.1538 100 18.1538 90 36.3077 90C54.4615 90 54.4615 95 72.6154 95C90.7692 95 90.7692 85 108.923 85C127.077 85 127.077 105 145.231 105C163.385 105 163.385 110 181.538 110C199.692 110 199.692 120 217.846 120C236 120 236 130 254.154 130C272.308 130 272.308 125 290.462 125C308.615 125 308.615 115 326.769 115C344.923 115 344.923 100 363.077 100C381.231 100 381.231 90 399.385 90C417.538 90 417.538 80 435.692 80C453.846 80 453.846 70 472 70 L 472 150 L 0 150 Z" fill="url(#motorGradient1)"></path>
+<path d="M0 100C18.1538 100 18.1538 90 36.3077 90C54.4615 90 54.4615 95 72.6154 95C90.7692 95 90.7692 85 108.923 85C127.077 85 127.077 105 145.231 105C163.385 105 163.385 110 181.538 110C199.692 110 199.692 120 217.846 120C236 120 236 130 254.154 130C272.308 130 272.308 125 290.462 125C308.615 125 308.615 115 326.769 115C344.923 115 344.923 100 363.077 100C381.231 100 381.231 90 399.385 90C417.538 90 417.538 80 435.692 80C453.846 80 453.846 70 472 70" stroke="var(--rh-danger)" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<div class="flex justify-between text-xs text-rh-text-muted font-medium">
+<span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>24:00</span>
+</div>
+</div>
+</div>
+<div class="rh-card">
+<p class="text-rh-text-primary text-base font-medium leading-normal">Stacker/Reclaimer #2 - Slew Drive</p>
+<p class="text-rh-text-primary tracking-light text-4xl font-bold leading-tight truncate">Nominal <span class="text-lg font-normal text-rh-text-muted">Current</span></p>
+<div class="flex gap-1 items-center text-sm mt-1">
+<p class="text-rh-text-secondary">Last 24 Hours:</p>
+<p class="text-rh-success font-medium flex items-center"><span class="material-symbols-outlined text-base">horizontal_rule</span>Stable</p>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 pt-6 pb-2">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="motorGradient2" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--rh-info); stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:var(--rh-info); stop-opacity:0.05"></stop>
+</linearGradient>
+</defs>
+<path d="M0 80C18.1538 80 18.1538 78 36.3077 78C54.4615 78 54.4615 82 72.6154 82C90.7692 82 90.7692 79 108.923 79C127.077 79 127.077 81 145.231 81C163.385 81 163.385 80 181.538 80C199.692 80 199.692 77 217.846 77C236 77 236 83 254.154 83C272.308 83 272.308 80 290.462 80C308.615 80 308.615 79 326.769 79C344.923 79 344.923 81 363.077 81C381.231 81 381.231 78 399.385 78C417.538 78 417.538 82 435.692 82C453.846 82 453.846 80 472 80 L 472 150 L 0 150 Z" fill="url(#motorGradient2)"></path>
+<path d="M0 80C18.1538 80 18.1538 78 36.3077 78C54.4615 78 54.4615 82 72.6154 82C90.7692 82 90.7692 79 108.923 79C127.077 79 127.077 81 145.231 81C163.385 81 163.385 80 181.538 80C199.692 80 199.692 77 217.846 77C236 77 236 83 254.154 83C272.308 83 272.308 80 290.462 80C308.615 80 308.615 79 326.769 79C344.923 79 344.923 81 363.077 81C381.231 81 381.231 78 399.385 78C417.538 78 417.538 82 435.692 82C453.846 82 453.846 80 472 80" stroke="var(--rh-info)" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<div class="flex justify-between text-xs text-rh-text-muted font-medium">
+<span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>24:00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-rh-text-primary text-2xl font-semibold leading-tight tracking-tight px-4 pb-4 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-rh-primary">calendar_month</span>Maintenance Schedule
+              </h2>
+<div class="px-4 py-3 @container">
+<div class="overflow-hidden rounded-lg border border-rh-border shadow-md">
+<table class="min-w-full divide-y divide-rh-border rh-table">
+<thead>
+<tr>
+<th scope="col">Equipment ID</th>
+<th scope="col">Component</th>
+<th scope="col">Last Maintenance</th>
+<th scope="col">Next Recommended</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-rh-border">
+<tr>
+<td class="font-medium">Loco #101</td>
+<td>Wheel Bearings</td>
+<td>2024-03-01</td>
+<td>2024-09-01</td>
+<td><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rh-success bg-opacity-20 text-rh-success">Scheduled</span></td>
+</tr>
+<tr class="bg-rh-surface">
+<td class="font-medium">Loco #105</td>
+<td>Wheel Bearings</td>
+<td>2023-12-15</td>
+<td class="text-rh-warning font-semibold">2024-06-15 (Overdue)</td>
+<td><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rh-warning bg-opacity-20 text-rh-warning">Needs Attention</span></td>
+</tr>
+<tr>
+<td class="font-medium">Loco #112</td>
+<td>Drive Motor</td>
+<td>2024-01-10</td>
+<td class="text-rh-danger font-semibold">Immediate Inspection</td>
+<td><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rh-danger bg-opacity-20 text-rh-danger">Critical</span></td>
+</tr>
+<tr class="bg-rh-surface">
+<td class="font-medium">Ship Loader #1</td>
+<td>Hydraulic System</td>
+<td>2024-04-20</td>
+<td>2024-10-20</td>
+<td><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rh-success bg-opacity-20 text-rh-success">Scheduled</span></td>
+</tr>
+<tr>
+<td class="font-medium">Stacker/Reclaimer #2</td>
+<td>Slew Bearing</td>
+<td>2023-10-01</td>
+<td class="text-rh-warning font-semibold">2024-07-01</td>
+<td><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rh-warning bg-opacity-20 text-rh-warning">Monitor Wear</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+<script src="../../js/toolbar-loader.js"></script>
+</body></html> 

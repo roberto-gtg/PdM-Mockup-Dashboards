@@ -1,0 +1,218 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Roy Hill Predictive Maintenance Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<style>
+      .status-pill {
+        @apply flex items-center justify-center text-xs font-medium leading-none px-2.5 py-1.5 rounded-full gap-1.5;
+      }
+      .status-increasing {
+        @apply bg-red-500/20 text-red-400;
+      }
+      .status-decreasing {
+        @apply bg-green-500/20 text-green-400;
+      }
+      .status-stable {
+        @apply bg-sky-500/20 text-sky-400;
+      }
+      .status-anomaly {
+        @apply bg-amber-500/20 text-amber-400;
+      }
+      .status-none {
+        @apply bg-slate-500/20 text-slate-400;
+      }
+    </style>
+</head>
+<body class="antialiased">
+<div class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-700 px-10 py-4 shadow-md">
+<div class="flex items-center gap-3 text-white">
+<svg class="h-8 w-8 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-slate-100">Roy Hill</h1>
+</div>
+<nav class="flex flex-1 justify-center">
+<ul class="flex items-center gap-6">
+<li><a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#">Overview</a></li>
+<li><a class="text-sm font-medium text-white hover:text-white transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-18px] after:h-1 after:w-full after:bg-[#0c7ff2] after:rounded-t-md" href="#">Maintenance</a></li>
+<li><a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#">Operations</a></li>
+<li><a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#">Safety</a></li>
+<li><a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#">Environment</a></li>
+<li><a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#">Community</a></li>
+</ul>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white transition-colors">
+<span class="material-icons text-xl">notifications</span>
+<span class="absolute top-1.5 right-1.5 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-[#111418]"></span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-600" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC13rJJKfqHNPj9Z3xfyraUCRrXfmAhnEMGyG9HUVkubaIVVqG--h6PtZrqZe_RWwysOWB2EeEI-YCQBeuUuBeTk0u4zTvknWb-WyrsR2kTeX9qXLhjgatw8_7gqNRccBIIo1fIrGRl2cxlFm5gA8O3ewLRQUbSVbyZ6h7AmyG19NYt3L8Cmg_F6fPm8Zfb45eajfTVDrcqVd7QJLDm488_bxQzk_hn9Crisq_irDr8s4kBjM6hDx_nlQuA0v0c5Smr9SNVMsxb1jY");'></div>
+</div>
+</header>
+<main class="px-10 flex flex-1 flex-col py-8">
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h2 class="text-slate-100 text-3xl font-bold leading-tight tracking-tight">Predictive Maintenance Dashboard</h2>
+<div class="flex items-center gap-2 text-sm text-slate-400">
+<span class="material-icons text-base">schedule</span>
+<span>Last refresh: 2 mins ago</span>
+<span class="text-slate-500">(auto-refresh ≤ 5 mins)</span>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex border-b border-slate-700 gap-1">
+<a class="flex flex-col items-center justify-center border-b-2 border-b-[#0c7ff2] text-[#0c7ff2] pb-3 pt-2 px-4" href="#">
+<p class="text-sm font-semibold">Wheelsets</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-400 hover:text-slate-200 hover:border-b-slate-500 pb-3 pt-2 px-4 transition-colors" href="#">
+<p class="text-sm font-semibold">Stacker-Reclaimers</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-400 hover:text-slate-200 hover:border-b-slate-500 pb-3 pt-2 px-4 transition-colors" href="#">
+<p class="text-sm font-semibold">Ship-Loaders</p>
+</a>
+</div>
+</div>
+<h3 class="text-slate-200 text-xl font-semibold leading-tight tracking-tight mb-4">Wheelset Health Overview</h3>
+<div class="overflow-x-auto @container">
+<div class="min-w-full inline-block align-middle">
+<div class="overflow-hidden rounded-lg border border-slate-700 bg-slate-800 shadow-sm">
+<table class="min-w-full divide-y divide-slate-700">
+<thead class="bg-slate-700/50">
+<tr>
+<th class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-400" scope="col">Asset ID</th>
+<th class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-400" scope="col">Location</th>
+<th class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-400" scope="col">Bearing Temp. Trend</th>
+<th class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-400" scope="col">Drive Motor Anomaly</th>
+<th class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-400" scope="col">Last Updated</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-700">
+<tr class="hover:bg-slate-700/30 transition-colors">
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-100">WS001</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-4 whitespace-nowrap text-sm text-slate-300">Track 1</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-increasing">
+<span class="material-icons-outlined text-base">trending_up</span>
+<span>Increasing</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-none">
+<span class="material-icons-outlined text-base">check_circle_outline</span>
+<span>None</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-4 whitespace-nowrap text-sm text-slate-300">2024-01-26 14:30</td>
+</tr>
+<tr class="hover:bg-slate-700/30 transition-colors">
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-100">WS002</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-4 whitespace-nowrap text-sm text-slate-300">Track 2</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-stable">
+<span class="material-icons-outlined text-base">trending_flat</span>
+<span>Stable</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-anomaly">
+<span class="material-icons-outlined text-base">warning_amber</span>
+<span>Anomaly Detected</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-4 whitespace-nowrap text-sm text-slate-300">2024-01-26 14:32</td>
+</tr>
+<tr class="hover:bg-slate-700/30 transition-colors">
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-100">WS003</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-4 whitespace-nowrap text-sm text-slate-300">Track 3</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-stable">
+<span class="material-icons-outlined text-base">trending_flat</span>
+<span>Stable</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-none">
+<span class="material-icons-outlined text-base">check_circle_outline</span>
+<span>None</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-4 whitespace-nowrap text-sm text-slate-300">2024-01-26 14:35</td>
+</tr>
+<tr class="hover:bg-slate-700/30 transition-colors">
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-100">WS004</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-4 whitespace-nowrap text-sm text-slate-300">Track 4</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-decreasing">
+<span class="material-icons-outlined text-base">trending_down</span>
+<span>Decreasing</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-none">
+<span class="material-icons-outlined text-base">check_circle_outline</span>
+<span>None</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-4 whitespace-nowrap text-sm text-slate-300">2024-01-26 14:38</td>
+</tr>
+<tr class="hover:bg-slate-700/30 transition-colors">
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-100">WS005</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 px-6 py-4 whitespace-nowrap text-sm text-slate-300">Track 5</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-stable">
+<span class="material-icons-outlined text-base">trending_flat</span>
+<span>Stable</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 px-6 py-4 whitespace-nowrap text-sm">
+<span class="status-pill status-none">
+<span class="material-icons-outlined text-base">check_circle_outline</span>
+<span>None</span>
+</span>
+</td>
+<td class="table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 px-6 py-4 whitespace-nowrap text-sm text-slate-300">2024-01-26 14:40</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                  @container(max-width:120px) {
+                    .table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:240px) {
+                    .table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:360px) {
+                    .table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:480px) {
+                    .table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-480 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:600px) {
+                    .table-61b7ac60-ee66-4348-b0c8-d65722c28031-column-600 {
+                      display: none;
+                    }
+                  }
+                </style>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

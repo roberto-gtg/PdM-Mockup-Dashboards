@@ -1,0 +1,203 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-[#0D1117] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#21262D] px-10 py-4">
+<div class="flex items-center gap-4 text-white">
+<img alt="Roy Hill Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSU0q6K5PRW8FYib8xlXF3B3TszxcqayHfTuRX0Lkd5PEcJtyALhxm-1RUf5OytGsOW9sFeqAE8CmVQcgZ90g2U56hKOgfm09P3r-ZsuHEiiun-H296R4vlg5Dnnx1gH7tlYrxIDTJx-_PcuJrCKjv4Iq7wuTLw-Ka2xmVLeO7L9pzGewkaAd_QILsQBlsmQ6xgqWIUKNZ8zkDhtCw87HH3vNi80-hn5TP6f8-NfwvTvlLMOHTCg4T0sMW6af9mD4Pxf4W_c2MY9s"/>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Roy Hill Predictive Maintenance</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-6">
+<a class="text-[#C9D1D9] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-[#C9D1D9] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Reports</a>
+<a class="text-[#C9D1D9] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Analytics</a>
+<a class="text-[#C9D1D9] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Maintenance</a>
+<a class="text-[#C9D1D9] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Operations</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-[#21262D] transition-colors">
+<span class="material-icons-outlined text-[#C9D1D9]">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#21262D]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrolKc_nmH-8cGnqPEjfq_ywUer5S7hGD07ceb4HefsYUnnyrdKxMadOCkVKoYER_SIIg3cOJEp2E0PVUkWXNc38kLiTbmcuyE0fKSRlMNXuEgVOHemlIjzGQAVEat2nWB1gxB1Y4WR7GQeTD8jY-nS9CXFWyWFWo5gNcUvK_tplxrz9CZVkg7uBHyRsAVKlpWMEPjy6lr9KwnKLGICmVkCPaOWiIC4qUTJ4lFAoZOjsRFKW7TDbe6wuPC_IOU6B6A5ajTa4v5d-M");'></div>
+</div>
+</div>
+</header>
+<main class="px-10 flex flex-1 flex-col py-8">
+<div class="layout-content-container flex flex-col max-w-[1280px] mx-auto flex-1 w-full">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight">Predictive Maintenance Trends</h1>
+<div class="flex items-center gap-2">
+<span class="text-[#8B949E] text-sm">Last updated: Jan 21, 2024</span>
+<button class="flex items-center gap-2 text-sm text-[#58A6FF] hover:text-[#C9D1D9] font-medium py-2 px-3 rounded-lg hover:bg-[#161B22] transition-colors">
+<span class="material-icons-outlined text-base">refresh</span>
+                  Refresh Data
+                </button>
+</div>
+</div>
+<section class="mb-10">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2">Rolling 12-Month Trends</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+<div class="flex flex-col gap-3 rounded-xl border border-[#30363D] bg-[#161B22] p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center justify-between">
+<p class="text-white text-lg font-semibold leading-normal">Equipment A - Temperature</p>
+<span class="material-icons-outlined text-[#58A6FF]">thermostat</span>
+</div>
+<p class="text-white tracking-tight text-4xl font-bold leading-tight truncate">25°C</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-[#8B949E] font-normal leading-normal">vs Last 12 Months</p>
+<div class="flex items-center text-[#3FB950]">
+<span class="material-icons-outlined text-base">arrow_upward</span>
+<p class="font-medium leading-normal">2%</p>
+</div>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_temp)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#58A6FF" stroke-linecap="round" stroke-width="2.5"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_temp" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#58A6FF" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#58A6FF" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between text-xs text-[#8B949E] font-medium tracking-wide">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl border border-[#30363D] bg-[#161B22] p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center justify-between">
+<p class="text-white text-lg font-semibold leading-normal">Equipment B - Vibration</p>
+<span class="material-icons-outlined text-[#F77868]">vibration</span>
+</div>
+<p class="text-white tracking-tight text-4xl font-bold leading-tight truncate">0.5 mm/s</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-[#8B949E] font-normal leading-normal">vs Last 12 Months</p>
+<div class="flex items-center text-[#F77868]">
+<span class="material-icons-outlined text-base">arrow_downward</span>
+<p class="font-medium leading-normal">1%</p>
+</div>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_vibration)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#F77868" stroke-linecap="round" stroke-width="2.5"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_vibration" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#F77868" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#F77868" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between text-xs text-[#8B949E] font-medium tracking-wide">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl border border-[#30363D] bg-[#161B22] p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center justify-between">
+<p class="text-white text-lg font-semibold leading-normal">Equipment C - Pressure</p>
+<span class="material-icons-outlined text-[#3FB950]">speed</span>
+</div>
+<p class="text-white tracking-tight text-4xl font-bold leading-tight truncate">150 kPa</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-[#8B949E] font-normal leading-normal">vs Last 12 Months</p>
+<div class="flex items-center text-[#3FB950]">
+<span class="material-icons-outlined text-base">arrow_upward</span>
+<p class="font-medium leading-normal">3%</p>
+</div>
+</div>
+<div class="flex min-h-[200px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_pressure)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#3FB950" stroke-linecap="round" stroke-width="2.5"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_pressure" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#3FB950" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#3FB950" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between text-xs text-[#8B949E] font-medium tracking-wide">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2">Alerts for Abnormal Drift</h2>
+<div class="px-4 py-3 @container">
+<div class="overflow-x-auto rounded-xl border border-[#30363D] bg-[#161B22] shadow-md">
+<table class="w-full min-w-[800px]">
+<thead class="bg-[#21262D]">
+<tr>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Equipment</th>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Parameter</th>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Current Value</th>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Threshold</th>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Status</th>
+<th class="px-6 py-4 text-left text-white text-sm font-semibold leading-normal">Last Updated</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#30363D]">
+<tr>
+<td class="h-[72px] px-6 py-3 text-white text-sm font-normal leading-normal">Equipment A</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">Temperature</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">25°C</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">28°C</td>
+<td class="h-[72px] px-6 py-3 text-sm font-normal leading-normal">
+<span class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-[#2F8132]/20 text-[#3FB950]">
+<span class="size-2 rounded-full bg-[#3FB950]"></span>
+                            Normal
+                          </span>
+</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">2024-01-20</td>
+</tr>
+<tr>
+<td class="h-[72px] px-6 py-3 text-white text-sm font-normal leading-normal">Equipment B</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">Vibration</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">0.5 mm/s</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">0.6 mm/s</td>
+<td class="h-[72px] px-6 py-3 text-sm font-normal leading-normal">
+<span class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-[#DB6D28]/20 text-[#F77868]">
+<span class="size-2 rounded-full bg-[#F77868]"></span>
+                            Warning
+                          </span>
+</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">2024-01-20</td>
+</tr>
+<tr>
+<td class="h-[72px] px-6 py-3 text-white text-sm font-normal leading-normal">Equipment C</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">Pressure</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">150 kPa</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">140 kPa</td>
+<td class="h-[72px] px-6 py-3 text-sm font-normal leading-normal">
+<span class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-[#DA3633]/20 text-[#F85149]">
+<span class="size-2 rounded-full bg-[#F85149]"></span>
+                            Critical
+                          </span>
+</td>
+<td class="h-[72px] px-6 py-3 text-[#C9D1D9] text-sm font-normal leading-normal">2024-01-20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

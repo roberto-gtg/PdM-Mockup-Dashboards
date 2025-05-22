@@ -1,0 +1,364 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B600%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Failure Risk Forecast - Predictive Maintenance</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../../css/toolbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-slate-900 pt-16 md:pt-20">
+<div id="toolbar-container"></div>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111518] dark group/design-root" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<main class="px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-7xl">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-white text-3xl font-bold tracking-tight">Predictive Maintenance Dashboard</h1>
+<p class="text-slate-400 text-base font-normal">AI-driven insights for proactive asset management</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 bg-[#0b80ee] hover:bg-[#0b80ee]/90 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
+<span class="material-icons text-lg">download</span>
+                  Export PDF
+                </button>
+<button class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
+<span class="material-icons text-lg">share</span>
+                  Share
+                </button>
+</div>
+</div>
+<div class="bg-[#1A1F26] rounded-xl shadow-xl overflow-hidden">
+<div class="px-6 py-4 border-b border-[#283139]">
+<h2 class="text-white text-xl font-semibold leading-tight tracking-tight">Assets Ranked by Failure Probability</h2>
+</div>
+<div class="px-2 py-2 @container">
+<div class="overflow-x-auto">
+<table class="w-full min-w-[1000px]">
+<thead class="bg-[#111518]">
+<tr>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">
+                          Asset ID
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">
+                          Asset Name
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+                          Failure Probability
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">
+                          Confidence Interval
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+                          Model
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">
+                          Last Updated
+                        </th>
+<th class="px-4 py-3 text-left text-slate-400 text-xs font-semibold uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#283139]">
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">A123</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Excavator 7</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#EF4444]" style="width: 85%;"></div>
+</div>
+<p class="text-red-400 text-sm font-semibold">85%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">78-92%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-sky-500/20 text-sky-400">Gradient Boosting</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">B456</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Conveyor Belt 3</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#F97316]" style="width: 72%;"></div>
+</div>
+<p class="text-orange-400 text-sm font-semibold">72%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">65-79%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-500/20 text-teal-400">LSTM</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">C789</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Crusher 1</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#F59E0B]" style="width: 68%;"></div>
+</div>
+<p class="text-amber-400 text-sm font-semibold">68%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">60-76%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-sky-500/20 text-sky-400">Gradient Boosting</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">D012</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Truck 12</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#EAB308]" style="width: 55%;"></div>
+</div>
+<p class="text-yellow-400 text-sm font-semibold">55%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">48-62%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-500/20 text-teal-400">LSTM</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">E345</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Drill 5</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#84CC16]" style="width: 42%;"></div>
+</div>
+<p class="text-lime-400 text-sm font-semibold">42%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">35-49%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-sky-500/20 text-sky-400">Gradient Boosting</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium">F678</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm">Loader 9</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#22C55E]" style="width: 38%;"></div>
+</div>
+<p class="text-green-400 text-sm font-semibold">38%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm">31-45%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-500/20 text-teal-400">LSTM</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">G901</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Grader 2</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#10B981]" style="width: 25%;"></div>
+</div>
+<p class="text-emerald-400 text-sm font-semibold">25%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">18-32%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-sky-500/20 text-sky-400">Gradient Boosting</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">H234</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Bulldozer 4</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#059669]" style="width: 15%;"></div>
+</div>
+<p class="text-emerald-500 text-sm font-semibold">15%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">8-22%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-500/20 text-teal-400">LSTM</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">I567</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Water Truck 1</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#047857]" style="width: 8%;"></div>
+</div>
+<p class="text-emerald-600 text-sm font-semibold">8%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">1-15%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-sky-500/20 text-sky-400">Gradient Boosting</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-[#1F252D] transition-colors">
+<td class="px-4 py-3 whitespace-nowrap text-white text-sm font-medium table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120">J890</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240">Service Vehicle 6</td>
+<td class="px-4 py-3 whitespace-nowrap text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 rounded-full bg-[#3b4854] overflow-hidden">
+<div class="h-full rounded-full bg-[#065F46]" style="width: 3%;"></div>
+</div>
+<p class="text-emerald-700 text-sm font-semibold">3%</p>
+</div>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480">0-10%</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-300 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600">
+<span class="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-500/20 text-teal-400">LSTM</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap text-slate-400 text-sm table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720">2024-03-15</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-[#0b80ee] hover:bg-[#0b80ee]/20 transition-colors">
+<span class="material-icons text-lg">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                  @container(max-width:120px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:240px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:360px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:480px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-480 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:600px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-600 {
+                      display: none;
+                    }
+                  }
+                  @container(max-width:720px) {
+                    .table-ad1dab75-0da3-450c-8a98-c242e8796ca8-column-720 {
+                      display: none;
+                    }
+                  }
+                </style>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex justify-center border-t border-[#283139] mt-auto">
+<div class="w-full max-w-7xl px-10 lg:px-20 xl:px-40">
+<footer class="py-6 text-center @container">
+<p class="text-slate-500 text-sm font-normal">© 2024 Roy Hill. All rights reserved.</p>
+</footer>
+</div>
+</footer>
+</div>
+</div>
+    <script src="../../js/toolbar-loader.js"></script>
+</body></html> 

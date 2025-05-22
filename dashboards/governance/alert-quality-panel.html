@@ -1,0 +1,193 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Roy Hill - Alert Quality Panel</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../../css/toolbar.css">
+<link rel="stylesheet" href="../../css/main-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div id="toolbar-container"></div>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111518] dark group/design-root overflow-x-hidden pt-16 md:pt-20" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(156,171,186)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); ">
+<div class="layout-container flex h-full grow flex-col">
+<main class="px-10 md:px-20 lg:px-40 flex flex-1 flex-col py-8">
+<div class="layout-content-container flex flex-col max-w-full flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight">Validation</h1>
+</div>
+<section class="mb-8">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2">KPIs</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#3b4854] bg-[#1b2127] shadow-lg">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Precision</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">85%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#3b4854] bg-[#1b2127] shadow-lg">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Recall</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">92%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#3b4854] bg-[#1b2127] shadow-lg">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Mean Lead Time</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">14 days</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#3b4854] bg-[#1b2127] shadow-lg">
+<p class="text-[#9cabba] text-sm font-medium leading-normal">Cost of False Positives</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">$25,000</p>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2">Alert Tuning</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-3 items-end">
+<label class="flex flex-col">
+<p class="text-[#9cabba] text-sm font-medium leading-normal pb-2">Model</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#0b80ee] border border-[#3b4854] bg-[#1b2127] h-12 bg-[image:--select-button-svg] placeholder:text-[#9cabba] px-4 py-2 text-base font-normal leading-normal">
+<option disabled="" selected="" value="">Select Model</option>
+<option value="model_a">Conveyor Belt Model</option>
+<option value="model_b">Haul Truck Engine Model</option>
+<option value="model_c">Crusher Performance Model</option>
+</select>
+</label>
+<label class="flex flex-col">
+<p class="text-[#9cabba] text-sm font-medium leading-normal pb-2">Alert Type</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#0b80ee] border border-[#3b4854] bg-[#1b2127] h-12 bg-[image:--select-button-svg] placeholder:text-[#9cabba] px-4 py-2 text-base font-normal leading-normal">
+<option disabled="" selected="" value="">Select Alert Type</option>
+<option value="type_a">Bearing Failure</option>
+<option value="type_b">Overheating</option>
+<option value="type_c">Oil Contamination</option>
+</select>
+</label>
+<label class="flex flex-col">
+<p class="text-[#9cabba] text-sm font-medium leading-normal pb-2">Time Range</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#0b80ee] border border-[#3b4854] bg-[#1b2127] h-12 bg-[image:--select-button-svg] placeholder:text-[#9cabba] px-4 py-2 text-base font-normal leading-normal">
+<option disabled="" selected="" value="">Select Time Range</option>
+<option value="7d">Last 7 Days</option>
+<option value="30d">Last 30 Days</option>
+<option value="90d">Last 90 Days</option>
+<option value="custom">Custom Range</option>
+</select>
+</label>
+</div>
+<div class="flex px-4 py-5 justify-end">
+<button class="flex min-w-[100px] items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-[#0b80ee] hover:bg-[#0968c3] text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Apply Filters</span>
+</button>
+</div>
+</section>
+<section>
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-2">Validation Results</h2>
+<div class="px-4 py-3 @container">
+<div class="overflow-x-auto rounded-lg border border-[#3b4854] bg-[#1b2127] shadow-lg">
+<table class="min-w-full">
+<thead class="bg-[#283139]">
+<tr>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">Date</th>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">Alert ID</th>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">Model</th>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">Alert Type</th>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">Lead Time</th>
+<th class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">
+                          Cost of False Positive
+                        </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#3b4854]">
+<tr class="hover:bg-[#212830] transition-colors">
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          2024-07-20
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">A12345</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Conveyor Belt Model
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Bearing Failure
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">15 days</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">$20,000</td>
+</tr>
+<tr class="hover:bg-[#212830] transition-colors">
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          2024-07-15
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">B67890</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Conveyor Belt Model
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Bearing Failure
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">12 days</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">$30,000</td>
+</tr>
+<tr class="hover:bg-[#212830] transition-colors">
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          2024-07-10
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">C11213</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Conveyor Belt Model
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Bearing Failure
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">18 days</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">$25,000</td>
+</tr>
+<tr class="hover:bg-[#212830] transition-colors">
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          2024-07-05
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">D14151</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Conveyor Belt Model
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Bearing Failure
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">10 days</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">$22,000</td>
+</tr>
+<tr class="hover:bg-[#212830] transition-colors">
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-120 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          2024-07-01
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">E16171</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Conveyor Belt Model
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">
+                          Bearing Failure
+                        </td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">14 days</td>
+<td class="table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 px-6 py-4 whitespace-nowrap text-[#9cabba] text-sm font-normal">$28,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                  @media (max-width: 1280px) {
+                    .table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-720 { display: none; }
+                  }
+                  @media (max-width: 1024px) {
+                    .table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-600 { display: none; }
+                  }
+                  @media (max-width: 768px) {
+                    .table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-480 { display: none; }
+                    .table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-360 { display: none; }
+                  }
+                  @media (max-width: 640px) {
+                    .table-8bbdfa73-b444-4366-afc2-9a5efd03f8a3-column-240 { display: none; }
+                  }
+                </style>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+<script src="../../js/toolbar-loader.js"></script>
+</body></html>

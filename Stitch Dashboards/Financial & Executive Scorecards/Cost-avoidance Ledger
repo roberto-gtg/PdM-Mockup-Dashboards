@@ -1,0 +1,102 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-[#121416] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2C3135] px-10 py-3">
+<div class="flex items-center gap-3 text-[#DCE8F3]">
+<div class="size-8">
+<svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.3167 14.4175C26.9053 14.2908 27.1242 14.3726 27.1721 14.3956C27.1917 14.4367 27.2364 14.5713 27.2054 14.889C27.1607 15.3503 26.9668 16.003 26.5714 16.82C25.7866 18.442 24.339 20.442 22.3905 22.3905C20.442 24.339 18.4421 25.7866 16.8201 26.5714C16.0031 26.9668 15.3504 27.1607 14.8891 27.2054C14.5714 27.2364 14.4367 27.1917 14.3956 27.172C14.3726 27.1242 14.2909 26.9053 14.4175 26.3166C14.5708 25.6036 14.9793 24.6438 15.6692 23.5211C16.505 22.1611 17.6998 20.6496 19.1747 19.1747C20.6496 17.6998 22.1612 16.505 23.5212 15.6692C24.6438 14.9792 25.6036 14.5708 26.3167 14.4175Z" fill="#DCE8F3"></path>
+<path clip-rule="evenodd" d="M2.94126 19.4935L12.5065 29.0587C13.2542 29.8064 14.2684 29.9453 15.1478 29.8595C16.039 29.7722 17.0098 29.4421 17.9816 28.9719C19.9368 28.0258 22.1745 26.3778 24.2761 24.2761C26.3778 22.1745 28.0258 19.9368 28.9719 17.9815C29.4421 17.0098 29.7722 16.039 29.8595 15.1478C29.9453 14.2684 29.8064 13.2542 29.0587 12.5065L19.4935 2.94124C18.5684 2.01625 17.251 2.01716 16.1907 2.24517C15.072 2.48575 13.8222 3.05613 12.5597 3.83201C10.9985 4.79144 9.3254 6.12235 7.72386 7.72385C6.12236 9.32539 4.79145 10.9985 3.83202 12.5597C3.05614 13.8222 2.48577 15.072 2.24519 16.1907C2.01717 17.251 2.01626 18.5684 2.94126 19.4935Z" fill="#DCE8F3" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-[#DCE8F3] text-xl font-bold tracking-tight">Roy Hill</h1>
+</div>
+<nav class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-6">
+<a class="text-[#DCE8F3] text-sm font-medium hover:text-white transition-colors" href="#">Dashboard</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Assets</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Models</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Alerts</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Reports</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#DCE8F3]/50" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtX6kBx2h9t_rK-2LFLCPEpAO6p74YEvsE1up0LyzL9pMiZC5ndADvBdo3jNzugvnuU9pLbwWEPyCoT3zSj03vAwB2Oqh2hejqBSzbA4JDXz9mO6XegrE_frBv-SSttckCotePXUno9gwyvgeDr6zPOBLw0nx43KamqVukc_4Dj3PDlXoAjpEnF7O5dJJ78N9Xt1iyVdl95aKDKtN_zJFgMlIazqXXpEbN9e6KJw9ow1z-WwS2N51RqdBDd5NY_57Vs6Pxx4SzadI");'></div>
+</nav>
+</header>
+<main class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-screen-xl">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4">
+<h2 class="text-[#DCE8F3] text-3xl font-bold tracking-tight">Predictive Maintenance ROI</h2>
+</div>
+<section class="p-4">
+<h3 class="text-[#DCE8F3] text-xl font-semibold mb-4">Overall Savings</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-[#1A1D21] border border-[#2C3135] shadow-lg">
+<p class="text-[#DCE8F3] text-sm font-medium">Total Savings</p>
+<p class="text-[#DCE8F3] text-3xl font-bold">$2.3M</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-[#1A1D21] border border-[#2C3135] shadow-lg">
+<p class="text-gray-400 text-sm font-medium">Maintenance Cost Reduction</p>
+<p class="text-[#DCE8F3] text-3xl font-bold">$1.8M</p>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-[#1A1D21] border border-[#2C3135] shadow-lg">
+<p class="text-gray-400 text-sm font-medium">Increased Uptime Value</p>
+<p class="text-[#DCE8F3] text-3xl font-bold">$500K</p>
+</div>
+</div>
+</section>
+<section class="p-4 mt-6">
+<h3 class="text-[#DCE8F3] text-xl font-semibold mb-4">Savings by Asset</h3>
+<div class="overflow-x-auto @container bg-[#1A1D21] rounded-lg border border-[#2C3135] shadow-lg">
+<table class="w-full min-w-[600px]">
+<thead>
+<tr class="bg-[#2C3135]">
+<th class="px-6 py-4 text-left text-[#DCE8F3] text-xs font-medium uppercase tracking-wider">Asset</th>
+<th class="px-6 py-4 text-left text-[#DCE8F3] text-xs font-medium uppercase tracking-wider">Model</th>
+<th class="px-6 py-4 text-left text-[#DCE8F3] text-xs font-medium uppercase tracking-wider">Savings</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#2C3135]">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-[#DCE8F3] text-sm">Excavator 1</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">Bearing Failure Prediction</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">$500K</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-[#DCE8F3] text-sm">Drill Rig 2</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">Hydraulic System Failure</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">$450K</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-[#DCE8F3] text-sm">Crusher 3</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">Motor Overload Prediction</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">$400K</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-[#DCE8F3] text-sm">Conveyor Belt 4</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">Belt Tear Prediction</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">$480K</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-[#DCE8F3] text-sm">Haul Truck 5</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">Engine Failure Prediction</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">$470K</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

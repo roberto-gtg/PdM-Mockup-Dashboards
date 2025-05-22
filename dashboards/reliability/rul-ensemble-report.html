@@ -1,0 +1,126 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>RUL Ensemble Report - Predictive Maintenance</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link rel="stylesheet" href="../../css/toolbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-[#111518] pt-16 md:pt-20">
+<div id="toolbar-container"></div>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex-1 px-6 md:px-12 lg:px-20 xl:px-40 py-8">
+<div class="max-w-5xl mx-auto">
+<div class="mb-8">
+<h1 class="text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">Predictive Maintenance Dashboard</h1>
+<p class="text-gray-400 text-sm font-normal leading-normal mt-1">Weekly Report - Generated: <span class="font-medium text-gray-300">July 5, 2024</span></p>
+</div>
+<section class="mb-10">
+<h2 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-icons-round text-[#0B80EE]">timeline</span>
+                Remaining Useful Life (RUL) Comparison
+              </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-4 rounded-xl border border-[#333C47] bg-[#1A1F24] p-6 shadow-lg hover:shadow-[#0B80EE]/20 transition-shadow duration-300">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-gray-300 text-lg font-medium leading-normal">Digital Twin RUL</p>
+<p class="text-white text-4xl font-bold leading-tight truncate mt-1">120 <span class="text-2xl font-medium text-gray-400">days</span></p>
+</div>
+<span class="material-icons-round text-3xl text-blue-500">precision_manufacturing</span>
+</div>
+<div class="flex gap-2 items-center">
+<p class="text-gray-400 text-sm font-normal leading-normal">Projection (Next 30 days):</p>
+<p class="text-green-500 text-sm font-semibold leading-normal flex items-center">
+<span class="material-icons-round text-base mr-1">arrow_upward</span>
+                      +10%
+                    </p>
+</div>
+<div class="flex-1 flex flex-col gap-4 py-4 min-h-[200px]">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_dt)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0B80EE" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_dt" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#0B80EE" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#0B80EE" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-around border-t border-gray-700 pt-3">
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 1</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 2</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 3</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 4</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[#333C47] bg-[#1A1F24] p-6 shadow-lg hover:shadow-[#EC5555]/20 transition-shadow duration-300">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-gray-300 text-lg font-medium leading-normal">ML Model RUL</p>
+<p class="text-white text-4xl font-bold leading-tight truncate mt-1">105 <span class="text-2xl font-medium text-gray-400">days</span></p>
+</div>
+<span class="material-icons-round text-3xl text-red-500">model_training</span>
+</div>
+<div class="flex gap-2 items-center">
+<p class="text-gray-400 text-sm font-normal leading-normal">Projection (Next 30 days):</p>
+<p class="text-red-500 text-sm font-semibold leading-normal flex items-center">
+<span class="material-icons-round text-base mr-1">arrow_downward</span>
+                      -5%
+                    </p>
+</div>
+<div class="flex-1 flex flex-col gap-4 py-4 min-h-[200px]">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 50C18.1538 50 18.1538 100 36.3077 100C54.4615 100 54.4615 70 72.6154 70C90.7692 70 90.7692 20 108.923 20C127.077 20 127.077 80 145.231 80C163.385 80 163.385 30 181.538 30C199.692 30 199.692 90 217.846 90C236 90 236 40 254.154 40C272.308 40 272.308 110 290.462 110C308.615 110 308.615 10 326.769 10C344.923 10 344.923 130 363.077 130C381.231 130 381.231 60 399.385 60C417.538 60 417.538 140 435.692 140C453.846 140 453.846 10 472 10V149H0V50Z" fill="url(#paint0_linear_ml)"></path>
+<path d="M0 50C18.1538 50 18.1538 100 36.3077 100C54.4615 100 54.4615 70 72.6154 70C90.7692 70 90.7692 20 108.923 20C127.077 20 127.077 80 145.231 80C163.385 80 163.385 30 181.538 30C199.692 30 199.692 90 217.846 90C236 90 236 40 254.154 40C272.308 40 272.308 110 290.462 110C308.615 110 308.615 10 326.769 10C344.923 10 344.923 130 363.077 130C381.231 130 381.231 60 399.385 60C417.538 60 417.538 140 435.692 140C453.846 140 453.846 10 472 10" stroke="#EC5555" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_ml" x1="236" x2="236" y1="10" y2="149">
+<stop stop-color="#EC5555" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#EC5555" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-around border-t border-gray-700 pt-3">
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 1</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 2</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 3</p>
+<p class="text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">Week 4</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-icons-round text-[#0B80EE]">calendar_today</span>
+                Next Best Maintenance Window
+              </h2>
+<div class="bg-[#1A1F24] border border-[#333C47] rounded-xl p-6 shadow-lg">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<p class="text-[#0B80EE] text-lg font-semibold">Recommended Window:</p>
+<p class="text-white text-2xl md:text-3xl font-bold">July 15th - July 22nd</p>
+</div>
+<button class="bg-[#0B80EE] hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-300 self-start md:self-center">
+<span class="material-icons-round">event_available</span>
+                    Schedule Maintenance
+                  </button>
+</div>
+<p class="text-gray-300 text-base font-normal leading-relaxed mt-4">
+                  Based on the RUL curves from both the Digital Twin and ML Model, the next best maintenance window is identified between
+                  <strong class="text-white">July 15th and July 22nd</strong>. This period offers an optimal balance, allowing for proactive maintenance to maximize equipment lifespan while minimizing potential operational disruptions and downtime.
+                </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+    <script src="../../js/toolbar-loader.js"></script>
+</body></html> 

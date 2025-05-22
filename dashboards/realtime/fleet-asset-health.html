@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Asset Health - Predictive Maintenance</title>
+    <link rel="stylesheet" href="../../css/toolbar.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/realtime.css">
+    <link rel="stylesheet" href="../../css/realtime/fleet-asset-health.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#111418]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+    <div id="toolbar-container"></div>
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden pt-16 md:pt-20">
+        <div class="layout-container flex h-full grow flex-col">
+            <main class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 flex-col py-6">
+                <div class="layout-content-container flex flex-col w-full max-w-7xl mx-auto flex-1">
+                    <div class="flex flex-wrap justify-between items-center gap-4 p-4">
+                        <h2 class="text-white tracking-tight text-3xl font-bold leading-tight">Live Equipment Status</h2>
+                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M232,128A104,104,0,1,1,74.94,32.61a8,8,0,0,1,10.29,12.08,88.08,88.08,0,1,0,81.61-11.44,8,8,0,1,1,12.56-9.9,104.13,104.13,0,0,1,52.6,104.65ZM120,80v52a8,8,0,0,0,8,8h52a8,8,0,0,0,0-16H136V80a8,8,0,0,0-16,0Z"></path></svg>
+                            <span>Last updated: <span class="font-medium text-gray-300">Just now</span> (Refreshes every 60s)</span>
+                        </div>
+                    </div>
+                    <div class="pb-4">
+                        <div class="flex border-b border-[#3b4754] px-4 gap-6">
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#0c7ff2] text-white pb-3 pt-4 group" href="#">
+                                <p class="text-sm font-semibold leading-normal tracking-[0.015em]">Haul Trucks</p>
+                                <span class="text-xs text-[#0c7ff2]">(10 units)</span>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 hover:text-white pb-3 pt-4 group transition-colors" href="#">
+                                <p class="text-sm font-semibold leading-normal tracking-[0.015em] group-hover:text-white">Excavators</p>
+                                <span class="text-xs text-gray-500 group-hover:text-[#0c7ff2]">(5 units)</span>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 hover:text-white pb-3 pt-4 group transition-colors" href="#">
+                                <p class="text-sm font-semibold leading-normal tracking-[0.015em] group-hover:text-white">Drills</p>
+                                <span class="text-xs text-gray-500 group-hover:text-[#0c7ff2]">(8 units)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="px-4 py-4">
+                        <label class="flex flex-col min-w-40 h-12 w-full md:w-1/3">
+                            <div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm">
+                                <div class="text-gray-400 flex border border-r-0 border-[#3b4754] bg-[#283039] items-center justify-center pl-4 rounded-l-lg">
+                                    <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                                    </svg>
+                                </div>
+                                <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-none focus:ring-2 focus:ring-[#0c7ff2] border border-[#3b4754] bg-[#283039] h-full placeholder:text-gray-500 px-3 text-sm font-normal leading-normal" placeholder="Search by Unit ID (e.g., HT-101)" value=""/>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="px-4 py-3 @container">
+                        <div class="flex overflow-hidden rounded-lg border border-[#3b4754] bg-[#181e25] shadow-lg">
+                            <table class="flex-1 w-full">
+                                <thead class="bg-[#1b2127]">
+                                    <tr>
+                                        <th class="table-col-unit-id px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[12%]">Unit ID</th>
+                                        <th class="table-col-health-index px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[18%]">
+                                            Health Index (%)
+                                        </th>
+                                        <th class="table-col-rul px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[15%]">
+                                            RUL (hours)
+                                        </th>
+                                        <th class="table-col-anomalies px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[35%]">
+                                            Top Sensor Anomalies
+                                        </th>
+                                        <th class="table-col-updated px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[20%]">
+                                            Last Updated
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-[#3b4754]">
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-101</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-green-500" style="width: 85%;"></div>
+                                                </div>
+                                                <p class="text-white text-sm font-medium">85%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1200</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+                                            <span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Engine Temp High</span>
+                                            <span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Oil Pressure Low</span>
+                                            <span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Vibration Excessive</span>
+                                        </td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-102</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-green-500" style="width: 92%;"></div>
+                                                </div>
+                                                <p class="text-white text-sm font-medium">92%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1500</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+                                            <span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Coolant Level Low</span>
+                                            <span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Tire Pressure Low</span>
+                                            <span class="inline-block bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-md text-xs mb-1">Fuel Consumption High</span>
+                                        </td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-103</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-yellow-500" style="width: 78%;"></div>
+                                                </div>
+                                                <p class="text-yellow-400 text-sm font-medium">78%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-gray-300 text-sm">900</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+                                            <span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Transmission Temp High</span>
+                                            <span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Brake Pressure Low</span>
+                                            <span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mb-1">Steering Fluid Low</span>
+                                        </td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-104</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-green-500" style="width: 95%;"></div>
+                                                </div>
+                                                <p class="text-white text-sm font-medium">95%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1800</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-green-400 text-sm italic">No anomalies detected</td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-105</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-green-500" style="width: 88%;"></div>
+                                                </div>
+                                                <p class="text-white text-sm font-medium">88%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1350</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+                                            <span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Engine Temp High</span>
+                                            <span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Oil Pressure Low</span>
+                                            <span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Vibration Excessive</span>
+                                        </td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#202731] transition-colors">
+                                        <td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-106</td>
+                                        <td class="table-col-health-index px-4 py-3">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+                                                    <div class="h-full rounded-full bg-red-500" style="width: 62%;"></div>
+                                                </div>
+                                                <p class="text-red-400 text-sm font-medium">62%</p>
+                                            </div>
+                                        </td>
+                                        <td class="table-col-rul px-4 py-3 text-red-400 text-sm">450</td>
+                                        <td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+                                            <span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Critical: Engine Overheat</span>
+                                            <span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Hydraulic Leak</span>
+                                            <span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Brake System Malfunction</span>
+                                        </td>
+                                        <td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:28:15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <style>
+                            @container (max-width: 1024px) {
+                                .table-col-anomalies { display: none; }
+                                .table-col-unit-id { width: 15%; }
+                                .table-col-health-index { width: 25%; }
+                                .table-col-rul { width: 20%; }
+                                .table-col-updated { width: 25%; }
+                            }
+                            @container (max-width: 768px) {
+                                .table-col-rul { display: none; }
+                                .table-col-updated { display: none; }
+                                .table-col-unit-id { width: 30%; }
+                                .table-col-health-index { width: 70%; }
+                            }
+                            @container (max-width: 480px) {
+                                .table-col-health-index { display: none; }
+                                .table-col-unit-id { width: 100%; text-align:center; }
+                                th { font-size: 0.65rem;}
+                                td { padding-top: 0.5rem; padding-bottom: 0.5rem;}
+                            }
+                        </style>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../../js/toolbar-loader.js"></script>
+</body>
+</html> 

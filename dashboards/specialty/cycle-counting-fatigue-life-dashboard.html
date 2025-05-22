@@ -1,0 +1,144 @@
+<html><head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <title>Roy Hill Predictive Maintenance - Fatigue Dashboard</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/toolbar.css">
+    <link rel="stylesheet" href="../../css/main-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body class="bg-[#121416]">
+    <div id="toolbar-container"></div>
+    <div class="relative flex size-full min-h-screen flex-col text-[#dce8f3] dark group/design-root overflow-x-hidden pt-16 md:pt-20" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(220, 232, 243)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: &quot;Space Grotesk&quot;, &quot;Noto Sans&quot;, sans-serif;">
+    <div class="layout-container flex h-full grow flex-col">
+    <main class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8">
+    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 gap-8">
+    <div class="flex flex-col gap-2 p-4">
+    <h2 class="text-[#dce8f3] text-4xl font-bold leading-tight tracking-tight">Predictive Maintenance Dashboard</h2>
+    <p class="text-[#a2abb3] text-base font-normal leading-normal">Monitor equipment health and predict maintenance needs with AI-powered insights.</p>
+    </div>
+    <section class="flex flex-col gap-6">
+    <h3 class="text-[#dce8f3] text-2xl font-bold leading-tight tracking-tight px-4">Fatigue Analysis</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+    <div class="flex flex-col gap-2">
+    <label class="text-[#dce8f3] text-sm font-medium" for="component-select">Select Component</label>
+    <select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#dce8f3] focus:outline-0 focus:ring-2 focus:ring-[#dce8f3] border border-[#40484f] bg-[#1e2124] focus:border-[#dce8f3]/50 h-12 bg-[image:--select-button-svg] placeholder:text-[#a2abb3] px-4 py-3 text-base font-normal leading-normal appearance-none" id="component-select">
+    <option disabled="" selected="" value="">Choose a component...</option>
+    <option value="shovel-boom">Shovel Boom</option>
+    <option value="rail-bridge">Rail Bridge</option>
+    <option value="haul-truck-chassis">Haul Truck Chassis</option>
+    <option value="conveyor-structure">Conveyor Structure</option>
+    </select>
+    </div>
+    <div class="flex flex-col gap-2">
+    <label class="text-[#dce8f3] text-sm font-medium" for="timeframe-select">Select Timeframe</label>
+    <select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#dce8f3] focus:outline-0 focus:ring-2 focus:ring-[#dce8f3] border border-[#40484f] bg-[#1e2124] focus:border-[#dce8f3]/50 h-12 bg-[image:--select-button-svg] placeholder:text-[#a2abb3] px-4 py-3 text-base font-normal leading-normal appearance-none" id="timeframe-select">
+    <option disabled="" selected="" value="">Choose a timeframe...</option>
+    <option value="last-7-days">Last 7 Days</option>
+    <option value="last-30-days">Last 30 Days</option>
+    <option value="last-90-days">Last 90 Days</option>
+    <option value="custom-range">Custom Range</option>
+    </select>
+    </div>
+    </div>
+    </section>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="flex flex-col gap-6">
+    <h3 class="text-[#dce8f3] text-2xl font-bold leading-tight tracking-tight px-4">Rainflow Counting</h3>
+    <div class="flex flex-col gap-4 px-4">
+    <div class="flex min-w-72 flex-1 flex-col gap-4 rounded-xl border border-[#40484f] bg-[#1a1d1f] p-6 shadow-lg">
+    <div class="flex items-center justify-between">
+    <p class="text-[#dce8f3] text-lg font-semibold leading-normal">Stress Cycles</p>
+    <span class="material-icons-outlined text-[#a2abb3]">trending_up</span>
+    </div>
+    <p class="text-[#dce8f3] text-4xl font-bold leading-tight truncate">1,257</p>
+    <div class="flex gap-2 items-center">
+    <p class="text-[#a2abb3] text-sm font-normal leading-normal">Last 30 Days</p>
+    <p class="text-[#0bda5b] text-sm font-medium leading-normal flex items-center">
+    <span class="material-icons text-base mr-1">arrow_upward</span>+15%
+                          </p>
+    </div>
+    <div class="grid min-h-[200px] grid-flow-col gap-4 grid-rows-[1fr_auto] items-end justify-items-center pt-4">
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 85%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Mon</p>
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 60%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Tue</p>
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 95%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Wed</p>
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 70%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Thu</p>
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 50%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Fri</p>
+    <div class="bg-[#2c3135] w-full rounded-t-md" style="height: 75%;"></div>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">Sat</p>
+    <div class="bg-[#dce8f3] w-full rounded-t-md" style="height: 100%;"></div>
+    <p class="text-[#dce8f3] text-xs font-bold leading-normal">Sun</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="flex flex-col gap-6">
+    <h3 class="text-[#dce8f3] text-2xl font-bold leading-tight tracking-tight px-4">Fatigue Modeling</h3>
+    <div class="flex flex-col gap-4 px-4">
+    <div class="flex min-w-72 flex-1 flex-col gap-4 rounded-xl border border-[#40484f] bg-[#1a1d1f] p-6 shadow-lg">
+    <div class="flex items-center justify-between">
+    <p class="text-[#dce8f3] text-lg font-semibold leading-normal">Fatigue Damage Accumulation</p>
+    <span class="material-icons-outlined text-[#a2abb3]">show_chart</span>
+    </div>
+    <p class="text-[#dce8f3] text-4xl font-bold leading-tight truncate">0.78 DAF</p>
+    <div class="flex gap-2 items-center">
+    <p class="text-[#a2abb3] text-sm font-normal leading-normal">Last 30 Days</p>
+    <p class="text-[#0bda5b] text-sm font-medium leading-normal flex items-center">
+    <span class="material-icons text-base mr-1">arrow_upward</span>+5%
+                          </p>
+    </div>
+    <div class="flex min-h-[200px] flex-1 flex-col gap-6 py-4">
+    <svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_1131_5935)"></path>
+    <path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#dce8f3" stroke-linecap="round" stroke-width="3"></path>
+    <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1131_5935" x1="236" x2="236" y1="1" y2="149">
+    <stop stop-color="#dce8f3" stop-opacity="0.3"></stop>
+    <stop offset="1" stop-color="#dce8f3" stop-opacity="0"></stop>
+    </linearGradient>
+    </defs>
+    </svg>
+    <div class="flex justify-around">
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W1</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W2</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W3</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W4</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W5</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W6</p>
+    <p class="text-[#a2abb3] text-xs font-medium leading-normal">W7</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section class="flex flex-col gap-4 p-4 rounded-xl border border-[#40484f] bg-[#1a1d1f] shadow-lg">
+    <div class="flex items-center justify-between">
+    <h4 class="text-[#dce8f3] text-lg font-semibold leading-normal">Remaining Useful Life (RUL)</h4>
+    <p class="text-[#dce8f3] text-xl font-bold leading-normal">75%</p>
+    </div>
+    <div class="w-full bg-[#40484f] rounded-full h-3 overflow-hidden">
+    <div class="bg-[#dce8f3] h-3 rounded-full" style="width: 75%;"></div>
+    </div>
+    <p class="text-[#a2abb3] text-sm font-normal leading-normal">Estimated remaining life based on current fatigue model and operational data.</p>
+    </section>
+    </div>
+    </main>
+    <footer class="border-t border-solid border-t-[#2c3135] px-10 py-6 text-center">
+    <p class="text-[#a2abb3] text-xs">© 2024 Roy Hill Holdings Pty Ltd. All rights reserved. AI-Driven Predictive Maintenance Dashboard.</p>
+    </footer>
+    </div>
+    </div>
+    <script src="../../js/toolbar-loader.js"></script>
+    </body></html>
+
+</rewritten_file>

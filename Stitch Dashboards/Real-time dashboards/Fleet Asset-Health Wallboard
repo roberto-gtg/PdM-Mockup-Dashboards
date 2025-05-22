@@ -1,0 +1,231 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Roy Hill - Mine Operations Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#111418]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] px-6 md:px-10 py-4 shadow-md">
+<div class="flex items-center gap-3">
+<img alt="Roy Hill Logo" class="h-8 w-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz2BK-4Ws5j55nkRqA_gZFngtt_C4SE-MNzGDVTXlfbx9qRsPk0jnp6lPRuycXGJ8gPTC_kiQSAFkxmJPzWzn5JIu-uy6m8LWNpmmIaTQL_mRg-YUEu8oZ2c0etOD3W4Fg5BOhmZkJVja9dV5oxeH2UzcpmE-xiaWHMgoZUfH6cAXXwh3eJSxxcDQq9OsgLGfYvD8fT2dJtN1Lf2ZV2aActiVsoOSLImE9J3CvYss62jOGiQZTYZFPRrZbgwMwRICedwgnwbfD3o4"/>
+<h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Mine Operations</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Overview</a>
+<a class="text-white text-sm font-medium leading-normal border-b-2 border-[#0c7ff2] pb-1" href="#">Live Status</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Reports</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Alerts</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center rounded-full h-10 w-10 bg-[#283039] text-gray-300 hover:text-white hover:bg-[#3b4754] transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+<span class="absolute top-1 right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0c7ff2] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-[#0c7ff2]"></span>
+</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0c7ff2]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOnvgouahZcnKbE_bjkeoT3_w9jBrWja0bbhuRTTKH6urMTfJh0M_7wcwp776P1gVsVblzIvEYcNFGNUqFK7kK_q7Qhq1KOAxcw_JP-CImgby3t-_X6dlycXF2t3gZDrFyuR4H3irf64QxPHNG0mtmpZ0e-7eP18Qr9ki_xupkdyuAE_adifFO74eLyocLPHgVvBvraTdIUoy4oybE1_JMTRCZ7F8uZ_zW7pYOs5iirMR7KbLFg3_lJA67SdwsHArDrHI3IkYMKT0");'></div>
+</div>
+</header>
+<main class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 flex-col py-6">
+<div class="layout-content-container flex flex-col w-full max-w-7xl mx-auto flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4">
+<h2 class="text-white tracking-tight text-3xl font-bold leading-tight">Live Equipment Status</h2>
+<div class="flex items-center gap-2 text-sm text-gray-400">
+<svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M232,128A104,104,0,1,1,74.94,32.61a8,8,0,0,1,10.29,12.08,88.08,88.08,0,1,0,81.61-11.44,8,8,0,1,1,12.56-9.9,104.13,104.13,0,0,1,52.6,104.65ZM120,80v52a8,8,0,0,0,8,8h52a8,8,0,0,0,0-16H136V80a8,8,0,0,0-16,0Z"></path></svg>
+<span>Last updated: <span class="font-medium text-gray-300">Just now</span> (Refreshes every 60s)</span>
+</div>
+</div>
+<div class="pb-4">
+<div class="flex border-b border-[#3b4754] px-4 gap-6">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#0c7ff2] text-white pb-3 pt-4 group" href="#">
+<p class="text-sm font-semibold leading-normal tracking-[0.015em]">Haul Trucks</p>
+<span class="text-xs text-[#0c7ff2]">(10 units)</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 hover:text-white pb-3 pt-4 group transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal tracking-[0.015em] group-hover:text-white">Excavators</p>
+<span class="text-xs text-gray-500 group-hover:text-[#0c7ff2]">(5 units)</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 hover:text-white pb-3 pt-4 group transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal tracking-[0.015em] group-hover:text-white">Drills</p>
+<span class="text-xs text-gray-500 group-hover:text-[#0c7ff2]">(8 units)</span>
+</a>
+</div>
+</div>
+<div class="px-4 py-4">
+<label class="flex flex-col min-w-40 h-12 w-full md:w-1/3">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm">
+<div class="text-gray-400 flex border border-r-0 border-[#3b4754] bg-[#283039] items-center justify-center pl-4 rounded-l-lg">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-none focus:ring-2 focus:ring-[#0c7ff2] border border-[#3b4754] bg-[#283039] h-full placeholder:text-gray-500 px-3 text-sm font-normal leading-normal" placeholder="Search by Unit ID (e.g., HT-101)" value=""/>
+</div>
+</label>
+</div>
+<div class="px-4 py-3 @container">
+<div class="flex overflow-hidden rounded-lg border border-[#3b4754] bg-[#181e25] shadow-lg">
+<table class="flex-1 w-full">
+<thead class="bg-[#1b2127]">
+<tr>
+<th class="table-col-unit-id px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[12%]">Unit ID</th>
+<th class="table-col-health-index px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[18%]">
+                        Health Index (%)
+                      </th>
+<th class="table-col-rul px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[15%]">
+                        RUL (hours)
+                      </th>
+<th class="table-col-anomalies px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[35%]">
+                        Top Sensor Anomalies
+                      </th>
+<th class="table-col-updated px-4 py-3 text-left text-gray-300 text-xs font-semibold uppercase tracking-wider w-[20%]">
+                        Last Updated
+                      </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#3b4754]">
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-101</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-green-500" style="width: 85%;"></div>
+</div>
+<p class="text-white text-sm font-medium">85%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1200</td>
+<td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+<span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Engine Temp High</span>
+<span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Oil Pressure Low</span>
+<span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Vibration Excessive</span>
+</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+</tr>
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-102</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-green-500" style="width: 92%;"></div>
+</div>
+<p class="text-white text-sm font-medium">92%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1500</td>
+<td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+<span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Coolant Level Low</span>
+<span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Tire Pressure Low</span>
+<span class="inline-block bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-md text-xs mb-1">Fuel Consumption High</span>
+</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+</tr>
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-103</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-yellow-500" style="width: 78%;"></div>
+</div>
+<p class="text-yellow-400 text-sm font-medium">78%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-gray-300 text-sm">900</td>
+<td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+<span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Transmission Temp High</span>
+<span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Brake Pressure Low</span>
+<span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mb-1">Steering Fluid Low</span>
+</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+</tr>
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-104</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-green-500" style="width: 95%;"></div>
+</div>
+<p class="text-white text-sm font-medium">95%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1800</td>
+<td class="table-col-anomalies px-4 py-3 text-green-400 text-sm italic">No anomalies detected</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+</tr>
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-105</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-green-500" style="width: 88%;"></div>
+</div>
+<p class="text-white text-sm font-medium">88%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-gray-300 text-sm">1350</td>
+<td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+<span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Engine Temp High</span>
+<span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Oil Pressure Low</span>
+<span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Vibration Excessive</span>
+</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:30:00</td>
+</tr>
+<tr class="hover:bg-[#202731] transition-colors">
+<td class="table-col-unit-id px-4 py-3 text-white text-sm font-medium">HT-106</td>
+<td class="table-col-health-index px-4 py-3">
+<div class="flex items-center gap-2">
+<div class="w-full max-w-[100px] h-2.5 rounded-full bg-[#3b4754] overflow-hidden">
+<div class="h-full rounded-full bg-red-500" style="width: 62%;"></div>
+</div>
+<p class="text-red-400 text-sm font-medium">62%</p>
+</div>
+</td>
+<td class="table-col-rul px-4 py-3 text-red-400 text-sm">450</td>
+<td class="table-col-anomalies px-4 py-3 text-gray-300 text-sm">
+<span class="inline-block bg-red-500/20 text-red-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Critical: Engine Overheat</span>
+<span class="inline-block bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-md text-xs mr-1 mb-1">Hydraulic Leak</span>
+<span class="inline-block bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md text-xs mb-1">Brake System Malfunction</span>
+</td>
+<td class="table-col-updated px-4 py-3 text-gray-400 text-sm">2024-01-26 10:28:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                @container (max-width: 1024px) {
+                  .table-col-anomalies { display: none; }
+                  .table-col-unit-id { width: 15%; }
+                  .table-col-health-index { width: 25%; }
+                  .table-col-rul { width: 20%; }
+                  .table-col-updated { width: 25%; }
+                }
+                @container (max-width: 768px) {
+                  .table-col-rul { display: none; }
+                  .table-col-updated { display: none; }
+                  .table-col-unit-id { width: 30%; }
+                  .table-col-health-index { width: 70%; }
+                }
+                 @container (max-width: 480px) {
+                  .table-col-health-index { display: none; }
+                  .table-col-unit-id { width: 100%; text-align:center; }
+                  th { font-size: 0.65rem;}
+                  td { padding-top: 0.5rem; padding-bottom: 0.5rem;}
+                }
+              </style>
+</div>
+</div>
+</main>
+<footer class="text-center py-4 border-t border-[#283039]">
+<p class="text-xs text-gray-500">© 2024 Roy Hill Holdings Pty Ltd. Predictive Maintenance Dashboard.</p>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance Overview</title>
+    <link rel="stylesheet" href="css/toolbar.css">
+    <link rel="stylesheet" href="css/main-styles.css">
+    <!-- Link to an icon library like Font Awesome if needed for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="toolbar-container"></div>
+
+    <div class="main-content-area">
+        <header class="overview-header">
+            <h1>Predictive Maintenance Overview</h1>
+            <p>Welcome to the AI-driven Predictive Maintenance Dashboard. Monitor equipment health, predict failures, and optimize maintenance.</p>
+        </header>
+
+        <section class="key-metrics">
+            <h2><i class="fas fa-chart-line"></i> Key Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Total Equipment</h3>
+                    <p class="metric-value">1,250</p>
+                    <i class="fas fa-tools metric-icon"></i>
+                </div>
+                <div class="metric-card">
+                    <h3>Equipment Health Score</h3>
+                    <p class="metric-value">92%</p>
+                    <i class="fas fa-shield-alt metric-icon"></i>
+                </div>
+                <div class="metric-card">
+                    <h3>Predicted Failures (Next 30 Days)</h3>
+                    <p class="metric-value">5</p>
+                    <i class="fas fa-exclamation-triangle metric-icon-alert"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="equipment-health">
+            <h2><i class="fas fa-wave-square"></i> Equipment Health</h2>
+            <div class="health-distribution-card">
+                <div class="health-distribution-header">
+                    <div>
+                        <h3>Equipment Health Distribution</h3>
+                        <p class="overall-health">92%</p>
+                        <p class="health-change">Overall <span class="positive-change"><i class="fas fa-arrow-up"></i> +2%</span></p>
+                    </div>
+                    <i class="fas fa-chart-pie health-pie-icon"></i>
+                </div>
+                <div class="health-bars">
+                    <div class="health-bar-item">
+                        <span class="status-label critical">CRITICAL</span>
+                        <div class="bar-container">
+                            <div class="bar critical-bar" style="width: 15%;"></div>
+                        </div>
+                        <span class="percentage">15%</span>
+                    </div>
+                    <div class="health-bar-item">
+                        <span class="status-label warning">WARNING</span>
+                        <div class="bar-container">
+                            <div class="bar warning-bar" style="width: 25%;"></div>
+                        </div>
+                        <span class="percentage">25%</span>
+                    </div>
+                    <div class="health-bar-item">
+                        <span class="status-label healthy">HEALTHY</span>
+                        <div class="bar-container">
+                            <div class="bar healthy-bar" style="width: 60%;"></div>
+                        </div>
+                        <span class="percentage">60%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-maintenance">
+            <h2><i class="fas fa-calendar-alt"></i> Upcoming Maintenance</h2>
+            <div class="maintenance-table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EQUIPMENT ID</th>
+                            <th>TYPE</th>
+                            <th>LOCATION</th>
+                            <th>PREDICTED FAILURE</th>
+                            <th>HEALTH SCORE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EQ-1234</td>
+                            <td>Excavator</td>
+                            <td>Mine Site A</td>
+                            <td>2024-03-15</td>
+                            <td><span class="health-score-bar critical-score"></span> 85</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-5678</td>
+                            <td>Drill Rig</td>
+                            <td>Mine Site B</td>
+                            <td>2024-03-22</td>
+                            <td><span class="health-score-bar critical-score"></span> 78</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-9012</td>
+                            <td>Haul Truck</td>
+                            <td>Mine Site A</td>
+                            <td>2024-04-05</td>
+                            <td><span class="health-score-bar warning-score"></span> 90</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-3456</td>
+                            <td>Crusher</td>
+                            <td>Processing Plant</td>
+                            <td>2024-04-12</td>
+                            <td><span class="health-score-bar critical-score"></span> 70</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-7890</td>
+                            <td>Conveyor Belt</td>
+                            <td>Processing Plant</td>
+                            <td>2024-04-20</td>
+                            <td><span class="health-score-bar warning-score"></span> 88</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="dashboards-section" class="dashboards-overview">
+            <h2><i class="fas fa-th-large"></i> Dashboards</h2>
+            <div class="dashboards-grid">
+                <div class="dashboard-card">
+                    <img src="assets/images/excavator.jpg" alt="Excavator Dashboard">
+                    <h3>Excavator Dashboard</h3>
+                    <p>Health metrics for excavators</p>
+                </div>
+                <div class="dashboard-card">
+                    <img src="assets/images/drill_rig.jpg" alt="Drill Rig Dashboard">
+                    <h3>Drill Rig Dashboard</h3>
+                    <p>Health metrics for drill rigs</p>
+                </div>
+                <div class="dashboard-card">
+                    <img src="assets/images/haul_truck.jpg" alt="Haul Truck Dashboard">
+                    <h3>Haul Truck Dashboard</h3>
+                    <p>Health metrics for haul trucks</p>
+                </div>
+                <div class="dashboard-card">
+                    <img src="assets/images/crusher.jpg" alt="Crusher Dashboard">
+                    <h3>Crusher Dashboard</h3>
+                    <p>Health metrics for crushers</p>
+                </div>
+                <div class="dashboard-card">
+                    <img src="assets/images/conveyor_belt.jpg" alt="Conveyor Belt Dashboard">
+                    <h3>Conveyor Belt Dashboard</h3>
+                    <p>Health metrics for conveyor belts</p>
+                </div>
+                <div class="dashboard-card add-new-dashboard">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Add New Dashboard</h3>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Roy Hill Mining. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/toolbar-loader.js"></script> 
+</body>
+</html> 

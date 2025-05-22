@@ -1,0 +1,258 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0c7ff2",
+              "primary-darker": "#0a6bce",
+              "primary-lighter": "#3da1f5",
+              "text-main": "#FFFFFF",
+              "text-secondary": "#B0B8C5",
+              "text-tertiary": "#7C899A",
+              "bg-primary": "#111418",
+              "bg-secondary": "#1E232A",
+              "bg-tertiary": "#283039",
+              "border-primary": "#283039",
+              "border-secondary": "#3B4754",
+              "status-green": "#0BDA5B",
+              "status-red": "#FA6238",
+              "status-yellow": "#FFB800",
+              "status-blue": "#0C7FF2",
+              "status-neutral": "#B0B8C5",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-bg-primary text-text-main" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-primary px-6 md:px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center rounded-md bg-primary p-1.5">
+<svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-text-main text-xl font-bold">Roy Hill Predictive Maintenance</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-text-secondary hover:text-text-main text-sm font-medium transition-colors" href="#">Overview</a>
+<a class="text-text-main text-sm font-medium border-b-2 border-primary pb-1" href="#">Conveyor Health</a>
+<a class="text-text-secondary hover:text-text-main text-sm font-medium transition-colors" href="#">Alerts</a>
+<a class="text-text-secondary hover:text-text-main text-sm font-medium transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-text-secondary hover:text-text-main transition-colors">
+<span class="material-icons text-2xl">notifications</span>
+</button>
+<button class="text-text-secondary hover:text-text-main transition-colors">
+<span class="material-icons text-2xl">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-border-secondary" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoA8_WRdVz89PyaIrzqkPIaSQ2uWG5Jl4JVLflReGqyLnGIUzUVZDhw4_fx6Gp6A3BPUcHb4hTI_D4rNp8Or622CHzJdVIGKjegOTHsIt5rG78_4R0XOSttkr965kPQXRU2oeuw5phgbYAiZcsIwAEjl8fKDCJqI639NQGgqAy5PK45aCPBfDeWnFEbcFanMlyLvc5Z5DAL0ZP344jZj-m2c7l-01XP3TiyrisUo0ERW-SqshjQYyQhh4EdrJ1X1jGZoW_q5jBz9g");'></div>
+</div>
+<button class="md:hidden text-text-secondary hover:text-text-main transition-colors">
+<span class="material-icons text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="px-6 md:px-10 lg:px-20 xl:px-40 flex-1 py-8">
+<div class="layout-content-container flex flex-col max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<h1 class="text-text-main text-3xl font-bold tracking-tight">Conveyor System Monitoring</h1>
+<div class="flex items-center gap-2 text-sm text-text-tertiary">
+<span class="material-icons text-base">schedule</span>
+<span>Last updated: <span class="text-text-secondary font-medium">Just now</span> (Refreshes every 30-60s)</span>
+</div>
+</div>
+<section class="mb-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+<h2 class="text-text-main text-xl font-semibold">Conveyor Belt Health - Hot Spot Map</h2>
+<div class="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+<button class="flex items-center justify-center gap-1.5 text-sm text-primary hover:text-primary-lighter transition-colors bg-bg-secondary hover:bg-bg-tertiary px-4 py-2 rounded-md border border-border-secondary">
+<span class="material-icons text-lg">play_circle_outline</span>
+                      Simulate Heatmap
+                    </button>
+<button class="flex items-center justify-center gap-1.5 text-sm text-text-secondary hover:text-text-main transition-colors bg-bg-secondary hover:bg-bg-tertiary px-4 py-2 rounded-md border border-border-secondary">
+<span class="material-icons text-lg">fullscreen</span>
+                      View Full Map
+                    </button>
+</div>
+</div>
+<div class="w-full bg-bg-secondary border border-border-secondary rounded-lg shadow-lg overflow-hidden">
+<div class="aspect-[16/7] bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAF_crhCBn4krt9hLZkNYoi8GkHaTH3IkOjb73oqkWMDPibXEa4Uc-uveUKVRBLa8HRZ4fQ9bva_aneydjG2NR3SoASyIXoggtSd0UqaqZFCaiR08MfOv5QQWJx2FUbuBOt14H91vEA2IaQLaAGzToATyisLaK8BHMTePhiZCvPeA1M78SBD1zY7t7kfPRT_91U_MbUfSwiJj6gxUc59M9VD1Sh6Qn0P8U6T-PZGXg6GxWrGYpeULArgLz_DyXSV6RaD5EhVijbFl8");'></div>
+<div class="p-4 border-t border-border-primary bg-bg-tertiary">
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<label class="text-sm text-text-secondary" for="simulation-speed">Simulation Speed:</label>
+<select class="bg-bg-primary text-text-main text-sm rounded-md border-border-secondary focus:ring-primary focus:border-primary py-1.5 px-2" id="simulation-speed">
+<option value="0.5">0.5x</option>
+<option selected="" value="1">1x</option>
+<option value="1.5">1.5x</option>
+<option value="2">2x</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<label class="text-sm text-text-secondary whitespace-nowrap" for="time-slider">Time (Last 24h):</label>
+<input class="w-full sm:w-64 h-2 bg-border-secondary rounded-lg appearance-none cursor-pointer accent-primary" id="time-slider" max="1440" min="0" type="range" value="720"/>
+<span class="text-sm text-text-secondary w-20 text-right">12:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-10">
+<h2 class="text-text-main text-xl font-semibold mb-4">Predictive Maintenance Insights</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-3 rounded-lg p-6 bg-bg-secondary border border-border-secondary shadow-md">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium">Belt Tear Probability (24h)</p>
+<span class="material-icons text-status-yellow text-xl">warning_amber</span>
+</div>
+<p class="text-text-main text-3xl font-bold">12%</p>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm text-status-green">arrow_upward</span>
+<p class="text-status-green text-sm font-medium">+2% from last cycle</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg p-6 bg-bg-secondary border border-border-secondary shadow-md">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium">Idler Failure Probability (7d)</p>
+<span class="material-icons text-status-blue text-xl">info</span>
+</div>
+<p class="text-text-main text-3xl font-bold">5%</p>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm text-status-red">arrow_downward</span>
+<p class="text-status-red text-sm font-medium">-1% from last cycle</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-lg p-6 bg-bg-secondary border border-border-secondary shadow-md">
+<div class="flex items-center justify-between">
+<p class="text-text-secondary text-sm font-medium">Belt Segment Wear Score</p>
+<span class="material-icons text-status-red text-xl">dangerous</span>
+</div>
+<p class="text-text-main text-3xl font-bold">88/100</p>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm text-status-red">arrow_downward</span>
+<p class="text-status-red text-sm font-medium">-3 points from last cycle</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-text-main text-xl font-semibold mb-4">Real-time Alerts</h2>
+<div class="bg-bg-secondary rounded-lg border border-border-secondary shadow-md overflow-x-auto @container">
+<table class="w-full min-w-[600px]">
+<thead class="bg-bg-tertiary">
+<tr>
+<th class="table-col-timestamp px-4 py-3 text-left text-text-secondary text-xs font-medium uppercase tracking-wider">Timestamp</th>
+<th class="table-col-event px-4 py-3 text-left text-text-secondary text-xs font-medium uppercase tracking-wider">Event</th>
+<th class="table-col-location px-4 py-3 text-left text-text-secondary text-xs font-medium uppercase tracking-wider">Location</th>
+<th class="table-col-status px-4 py-3 text-left text-text-secondary text-xs font-medium uppercase tracking-wider">Status</th>
+<th class="px-4 py-3 text-left text-text-secondary text-xs font-medium uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-primary">
+<tr class="hover:bg-bg-tertiary transition-colors">
+<td class="table-col-timestamp px-4 py-3 text-sm text-text-secondary">2024-03-15 14:30:15</td>
+<td class="table-col-event px-4 py-3 text-sm text-text-main font-medium">Belt Mis-tracking Detected</td>
+<td class="table-col-location px-4 py-3 text-sm text-text-secondary">Conveyor 3, Section B</td>
+<td class="table-col-status px-4 py-3 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-status-yellow/20 text-status-yellow">
+<span class="material-icons text-sm mr-1">warning</span>
+                          Warning
+                        </span>
+</td>
+<td class="px-4 py-3 text-sm">
+<button class="text-primary hover:text-primary-lighter font-medium transition-colors">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-bg-tertiary transition-colors">
+<td class="table-col-timestamp px-4 py-3 text-sm text-text-secondary">2024-03-15 13:45:52</td>
+<td class="table-col-event px-4 py-3 text-sm text-text-main font-medium">Idler Failure Predicted</td>
+<td class="table-col-location px-4 py-3 text-sm text-text-secondary">Conveyor 1, Section A</td>
+<td class="table-col-status px-4 py-3 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-status-red/20 text-status-red">
+<span class="material-icons text-sm mr-1">error</span>
+                          Alert
+                        </span>
+</td>
+<td class="px-4 py-3 text-sm">
+<button class="text-primary hover:text-primary-lighter font-medium transition-colors">Investigate</button>
+</td>
+</tr>
+<tr class="hover:bg-bg-tertiary transition-colors">
+<td class="table-col-timestamp px-4 py-3 text-sm text-text-secondary">2024-03-15 12:15:03</td>
+<td class="table-col-event px-4 py-3 text-sm text-text-main font-medium">Belt Tear Risk Increased</td>
+<td class="table-col-location px-4 py-3 text-sm text-text-secondary">Conveyor 2, Section C</td>
+<td class="table-col-status px-4 py-3 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-status-yellow/20 text-status-yellow">
+<span class="material-icons text-sm mr-1">warning</span>
+                          Warning
+                        </span>
+</td>
+<td class="px-4 py-3 text-sm">
+<button class="text-primary hover:text-primary-lighter font-medium transition-colors">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-bg-tertiary transition-colors">
+<td class="table-col-timestamp px-4 py-3 text-sm text-text-secondary">2024-03-15 11:00:20</td>
+<td class="table-col-event px-4 py-3 text-sm text-text-main font-medium">Normal Operation</td>
+<td class="table-col-location px-4 py-3 text-sm text-text-secondary">Conveyor 4, Section D</td>
+<td class="table-col-status px-4 py-3 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-status-green/20 text-status-green">
+<span class="material-icons text-sm mr-1">check_circle</span>
+                          Normal
+                        </span>
+</td>
+<td class="px-4 py-3 text-sm">
+<button class="text-primary hover:text-primary-lighter font-medium transition-colors">View Log</button>
+</td>
+</tr>
+<tr class="hover:bg-bg-tertiary transition-colors">
+<td class="table-col-timestamp px-4 py-3 text-sm text-text-secondary">2024-03-15 10:30:05</td>
+<td class="table-col-event px-4 py-3 text-sm text-text-main font-medium">Belt Mis-tracking Detected</td>
+<td class="table-col-location px-4 py-3 text-sm text-text-secondary">Conveyor 3, Section B</td>
+<td class="table-col-status px-4 py-3 text-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-status-yellow/20 text-status-yellow">
+<span class="material-icons text-sm mr-1">warning</span>
+                          Warning
+                        </span>
+</td>
+<td class="px-4 py-3 text-sm">
+<button class="text-primary hover:text-primary-lighter font-medium transition-colors">View Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+<style>
+                  @container (max-width: 700px) {
+                    .table-col-location { display: none; }
+                  }
+                  @container (max-width: 550px) {
+                    .table-col-timestamp { display: none; }
+                  }
+                   @container (max-width: 450px) {
+                    .table-col-status { display: none; }
+                  }
+                </style>
+</div>
+</section>
+</div>
+</main>
+<footer class="text-center py-6 border-t border-border-primary">
+<p class="text-sm text-text-tertiary">© 2024 Roy Hill Holdings Pty Ltd. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</body></html>

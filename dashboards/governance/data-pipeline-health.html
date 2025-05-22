@@ -1,0 +1,169 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Roy Hill - Data Integrity Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-gray-900 text-gray-100" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-700 py-4">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold leading-tight tracking-tight">Roy Hill</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-300 hover:text-blue-500 transition-colors" href="#">Overview</a>
+<a class="text-sm font-medium text-gray-300 hover:text-blue-500 transition-colors" href="#">Explore</a>
+<a class="text-sm font-medium text-blue-500" href="#">Dashboards</a>
+<a class="text-sm font-medium text-gray-300 hover:text-blue-500 transition-colors" href="#">Alerts</a>
+<a class="text-sm font-medium text-gray-300 hover:text-blue-500 transition-colors" href="#">Browse</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<span class="material-icons text-gray-400">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-gray-700 hover:border-blue-500 transition-colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAi4LOLSoGky_bwIZ39yPWzWhmSjgQX0l_3eMk-OmxbuLE_WoOjcJE1tkD_HPC9ks7em7UnTQYjy-B6r5S27M2Yha6O5AKiTOpaC81zbC8K7HUFOYnOy5korXDn58nCLtmO8DK5RqenDA6FEWb3gIR8vty0820pzkBlC_OPBQqjqWRJ3NxeOOlnbp8UphIifE4p8skKcAwfyjMyO6fem9zpH0fuOXoft-ega-sjWz6y4JblDWKLGkMDF01sWu3aLHEysaFiaaFaMok");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 py-8">
+<div class="container mx-auto px-4">
+<div class="mb-8 flex items-center justify-between">
+<h1 class="text-3xl font-bold tracking-tight">Data Integrity</h1>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 rounded-lg bg-gray-700 px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+<span class="material-icons text-base">filter_list</span>
+              Filter
+            </button>
+<button class="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+<span class="material-icons text-base">add</span>
+              New Report
+            </button>
+</div>
+</div>
+<section class="mb-8">
+<h2 class="mb-4 text-xl font-semibold text-gray-200">Data Ingestion</h2>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all hover:shadow-blue-500/20">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-medium text-gray-400">Latency</p>
+<span class="material-icons text-blue-500">speed</span>
+</div>
+<p class="text-3xl font-bold text-white">120 ms</p>
+<div class="mt-2 flex items-center text-sm">
+<span class="material-icons text-sm text-green-500">arrow_upward</span>
+<p class="text-green-500 ml-1">+10%</p>
+<p class="text-gray-500 ml-2">vs last period</p>
+</div>
+</div>
+<div class="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all hover:shadow-blue-500/20">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-medium text-gray-400">Tag Loss Rate</p>
+<span class="material-icons text-yellow-500">warning</span>
+</div>
+<p class="text-3xl font-bold text-white">0.05%</p>
+<div class="mt-2 flex items-center text-sm">
+<span class="material-icons text-sm text-red-500">arrow_downward</span>
+<p class="text-red-500 ml-1">-0.01%</p>
+<p class="text-gray-500 ml-2">vs last period</p>
+</div>
+</div>
+<div class="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all hover:shadow-blue-500/20">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-medium text-gray-400">Historian Data Gaps</p>
+<span class="material-icons text-red-500">error_outline</span>
+</div>
+<p class="text-3xl font-bold text-white">0.01%</p>
+<div class="mt-2 flex items-center text-sm">
+<span class="material-icons text-sm text-red-500">arrow_downward</span>
+<p class="text-red-500 ml-1">-0.02%</p>
+<p class="text-gray-500 ml-2">vs last period</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="mb-4 text-xl font-semibold text-gray-200">Data Quality Trends</h2>
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+<div class="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg">
+<div class="flex items-center justify-between">
+<p class="text-base font-medium text-gray-300">Tag Loss Rate Over Time</p>
+<select class="bg-gray-700 text-gray-300 text-sm rounded-md px-2 py-1 border-none focus:ring-2 focus:ring-blue-500">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+<option>Last 90 Days</option>
+</select>
+</div>
+<p class="mt-1 text-3xl font-bold text-white">0.05%</p>
+<div class="mt-1 flex items-center gap-1 text-sm">
+<p class="text-gray-400">Current</p>
+<span class="material-icons text-xs text-red-500">arrow_downward</span>
+<p class="text-red-500">-0.01%</p>
+</div>
+<div class="mt-6 h-48">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chartGradient1)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0b80ee" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chartGradient1" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#0b80ee" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#0b80ee" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="mt-4 flex justify-around text-xs font-medium text-gray-500">
+<span>Day 1</span><span>Day 2</span><span>Day 3</span><span>Day 4</span><span>Day 5</span><span>Day 6</span><span>Day 7</span>
+</div>
+</div>
+<div class="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg">
+<div class="flex items-center justify-between">
+<p class="text-base font-medium text-gray-300">Historian Data Gaps Over Time</p>
+<select class="bg-gray-700 text-gray-300 text-sm rounded-md px-2 py-1 border-none focus:ring-2 focus:ring-blue-500">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+<option>Last 90 Days</option>
+</select>
+</div>
+<p class="mt-1 text-3xl font-bold text-white">0.01%</p>
+<div class="mt-1 flex items-center gap-1 text-sm">
+<p class="text-gray-400">Current</p>
+<span class="material-icons text-xs text-red-500">arrow_downward</span>
+<p class="text-red-500">-0.02%</p>
+</div>
+<div class="mt-6 h-48">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 130C18.1538 130 18.1538 70 36.3077 70C54.4615 70 54.4615 90 72.6154 90C90.7692 90 90.7692 30 108.923 30C127.077 30 127.077 100 145.231 100C163.385 100 163.385 50 181.538 50C199.692 50 199.692 110 217.846 110C236 110 236 80 254.154 80C272.308 80 272.308 10 290.462 10C308.615 10 308.615 140 326.769 140C344.923 140 344.923 20 363.077 20C381.231 20 381.231 90 399.385 90C417.538 90 417.538 40 435.692 40C453.846 40 453.846 120 472 120V149H0V130Z" fill="url(#chartGradient2)"></path>
+<path d="M0 130C18.1538 130 18.1538 70 36.3077 70C54.4615 70 54.4615 90 72.6154 90C90.7692 90 90.7692 30 108.923 30C127.077 30 127.077 100 145.231 100C163.385 100 163.385 50 181.538 50C199.692 50 199.692 110 217.846 110C236 110 236 80 254.154 80C272.308 80 272.308 10 290.462 10C308.615 10 308.615 140 326.769 140C344.923 140 344.923 20 363.077 20C381.231 20 381.231 90 399.385 90C417.538 90 417.538 40 435.692 40C453.846 40 453.846 120 472 120" stroke="#fa6238" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chartGradient2" x1="236" x2="236" y1="10" y2="149">
+<stop stop-color="#fa6238" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#fa6238" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="mt-4 flex justify-around text-xs font-medium text-gray-500">
+<span>Day 1</span><span>Day 2</span><span>Day 3</span><span>Day 4</span><span>Day 5</span><span>Day 6</span><span>Day 7</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="py-6 border-t border-gray-700">
+<div class="container mx-auto px-4 text-center text-sm text-gray-500">
+        © 2023 Roy Hill. All rights reserved. AI-Driven Predictive Maintenance Dashboard.
+      </div>
+</footer>
+</div>
+<script src="../../js/toolbar-loader.js"></script>
+</body></html>

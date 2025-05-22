@@ -1,0 +1,171 @@
+/* Toolbar styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
+    background-color: #1a1a2e; /* Dark background for the page body for context */
+    color: #e0e0e0; /* Light text color for contrast */
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #10101a; /* Slightly darker than body for toolbar */
+    color: #fff;
+    position: fixed; /* Make toolbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure toolbar is above other content */
+    height: 60px; /* Fixed height for the toolbar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-logo {
+    height: 40px; /* Adjust as needed */
+    width: 40px;
+    margin-right: 10px;
+    /* Debug comment: Updated class name to match HTML */
+}
+
+.toolbar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.toolbar-center {
+    display: flex;
+    gap: 20px; /* Spacing between nav links */
+}
+
+.nav-link {
+    color: #c0c0c0; /* Lighter grey for nav links */
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    background-color: #2a2a3e; /* Highlight for hover/active link */
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    font-size: 30px; /* Font Awesome icon size */
+    color: #c0c0c0;
+    cursor: pointer;
+    transition: color 0.3s;
+    /* Debug comment: Updated to use Font Awesome user icon */
+}
+
+.user-icon:hover {
+    color: #ffffff;
+}
+
+.user-profile-icon {
+    height: 30px; /* Adjust as needed */
+    width: 30px;
+    border-radius: 50%; /* Circular icon */
+    cursor: pointer;
+    background-color: #ccc; /* Placeholder if image is not found */
+}
+
+/* Dropdown Navigation Styles (Applied rule: Enhanced navigation) */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Debug comment: Dropdown toggle styling */
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a3e;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    /* Debug comment: Dropdown menu positioning */
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 8px 16px;
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-bottom: 1px solid #2a2a3e;
+    transition: background-color 0.3s, color 0.3s;
+    /* Debug comment: Individual dropdown item styling */
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    background-color: #2a2a3e;
+    color: #ffffff;
+}
+
+.dropdown-item.active {
+    border-left: 3px solid #4A90E2;
+    /* Debug comment: Active dropdown item indicator */
+}
+
+/* Prevent dropdown from closing when hovering over menu */
+.nav-dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Style for the main content to not be obscured by fixed toolbar */
+.main-content-area {
+    padding-top: 70px; /* Height of toolbar + some margin */
+} 

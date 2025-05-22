@@ -1,0 +1,329 @@
+/* General Body and Page Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #12121a; /* Dark background for the page */
+    color: #e0e0e0; /* Light text color for contrast */
+    line-height: 1.6;
+}
+
+.main-content-area {
+    padding: 20px;
+    padding-top: 80px; /* Account for fixed toolbar height + margin */
+    max-width: 1400px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #1a1a2e; /* Card background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3a3a5e;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+h2 .fas {
+    margin-right: 10px;
+    color: #4e8cff; /* Icon color */
+}
+
+/* Overview Header */
+.overview-header {
+    background-color: #1a1a2e; /* Consistent card background */
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.overview-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.overview-header p {
+    font-size: 1.1em;
+    color: #b0b0b0;
+}
+
+/* Key Metrics */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    background-color: #22223b; /* Slightly different shade for metric cards */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.metric-card h3 {
+    font-size: 1.2em;
+    color: #c0c0c0;
+    margin-bottom: 15px;
+}
+
+.metric-value {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.metric-icon {
+    font-size: 2.5em;
+    color: #4e8cff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.7;
+}
+
+.metric-icon-alert {
+    font-size: 2.5em;
+    color: #ff4d4d; /* Alert color */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* Equipment Health */
+.health-distribution-card {
+    background-color: #22223b;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.health-distribution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.health-distribution-header h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.overall-health {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.health-change {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.positive-change {
+    color: #4caf50;
+}
+
+.positive-change .fas {
+    margin-right: 3px;
+}
+
+.health-pie-icon {
+    font-size: 3em;
+    color: #4e8cff;
+}
+
+.health-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.health-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    width: 70px; /* Fixed width for alignment */
+    text-transform: uppercase;
+}
+
+.status-label.critical { color: #ff4d4d; }
+.status-label.warning { color: #ffac33; }
+.status-label.healthy { color: #4caf50; }
+
+.bar-container {
+    flex-grow: 1;
+    background-color: #3a3a5e;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.critical-bar { background-color: #ff4d4d; }
+.warning-bar { background-color: #ffac33; }
+.healthy-bar { background-color: #4caf50; }
+
+.percentage {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #c0c0c0;
+    min-width: 30px; /* Ensure space for percentage */
+    text-align: right;
+}
+
+/* Upcoming Maintenance Table */
+.maintenance-table-card {
+    background-color: #22223b;
+    padding: 0; /* Table will have its own padding */
+    border-radius: 8px;
+    overflow-x: auto; /* For responsiveness */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e0e0e0;
+}
+
+thead {
+    background-color: #2a2a4a; /* Darker header for table */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #3a3a5e;
+}
+
+th {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b0b0b0;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #2a2a4a;
+}
+
+.health-score-bar {
+    display: inline-block;
+    width: 40px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.critical-score { background-color: #ff4d4d; }
+.warning-score { background-color: #ffac33; }
+.healthy-score { background-color: #4caf50; }
+
+/* Dashboards Overview */
+.dashboards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #22223b;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.dashboard-card img {
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover;
+    display: block;
+}
+
+.dashboard-card h3 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 15px 10px 5px;
+}
+
+.dashboard-card p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin: 0 10px;
+}
+
+.add-new-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #3a3a5e;
+    min-height: 260px; /* Match other card height */
+    color: #60607a;
+}
+
+.add-new-dashboard:hover {
+    border-color: #4e8cff;
+    color: #4e8cff;
+}
+
+.add-new-dashboard .fas {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.add-new-dashboard h3 {
+    color: inherit; /* Inherit color from parent for hover effect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #808080;
+    border-top: 1px solid #3a3a5e;
+} 

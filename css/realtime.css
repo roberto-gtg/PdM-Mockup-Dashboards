@@ -1,0 +1,78 @@
+/* CSS for Real-Time Control-Room Dashboards */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-link:hover {
+    background-color: var(--primary-color);
+}
+
+/* Real-time specific styling */
+.real-time-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.real-time-data {
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+/* Status indicators for health monitoring */
+.status-healthy {
+    color: #2ecc71;
+}
+
+.status-warning {
+    color: #f39c12;
+}
+
+.status-critical {
+    color: #e74c3c;
+}
+
+/* Heatmap color gradient */
+.heatmap-gradient {
+    background: linear-gradient(to right, #2ecc71, #f1c40f, #e74c3c);
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+} 

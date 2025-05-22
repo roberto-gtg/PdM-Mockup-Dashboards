@@ -1,0 +1,20 @@
+{
+  "name": "dashboard-test-2",
+  "version": "1.0.0",
+  "description": "This project contains the structure and templates for an HTML web application used to display asset management dashboards for industrial operations. The dashboards display data from databases for each graph/visualization.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

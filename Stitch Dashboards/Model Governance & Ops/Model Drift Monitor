@@ -1,0 +1,168 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111518] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2A3B4B] px-10 py-4 shadow-md">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-[#0b80ee]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Roy Hill Predictive Maintenance</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-6">
+<a class="text-[#E0E0E0] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-[#E0E0E0] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Production</a>
+<a class="text-[#0b80ee] text-sm font-semibold leading-normal border-b-2 border-[#0b80ee] pb-1" href="#">Maintenance</a>
+<a class="text-[#E0E0E0] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Safety</a>
+<a class="text-[#E0E0E0] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Environment</a>
+<a class="text-[#E0E0E0] hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-[#2A3B4B] transition-colors">
+<span class="material-icons text-white">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0b80ee]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtKjBDFmCUVNdPLLTQwwhLBY8EwYtve3oDe81ABNx98zcfZg_dIE_oQ6qxWgs4QhVUUVGMGhGt-f62V2hTzpgj1wkVnWwNg8fqcNyRpEjv5yBjl4dvGsUjdzNQItA_AaZVY4yzv1CIA6KLIyd1OSFnZmzQdAZRf6E4c5W1xfPm8u5lgfnhvSJGiwBgDcf4NTnQe0ZQQ5I1C2ZlqSXhssj3L_QcVXle95kp58fmT2tWK7_w_a3T2RYYJq0TQZxVJL0lABtK--VpOA4");'></div>
+</div>
+</div>
+</header>
+<main class="px-10 md:px-20 lg:px-40 flex flex-1 flex-col py-8 bg-[#181E24]">
+<div class="layout-content-container flex flex-col max-w-[1200px] w-full mx-auto flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight">Model Reliability &amp; Performance</h1>
+<div class="flex items-center gap-2">
+<span class="material-icons text-[#9cabba]">calendar_today</span>
+<span class="text-[#9cabba] text-sm font-medium">Last updated: 1 hour ago</span>
+</div>
+</div>
+<section class="mb-8">
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">Model Performance</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-[#1F2933] border border-[#2A3B4B] shadow-lg hover:shadow-[#0b80ee]/20 transition-shadow">
+<div class="flex items-center justify-between">
+<p class="text-white text-lg font-medium leading-normal">Prediction Accuracy</p>
+<span class="material-icons text-[#0bda5b]">trending_up</span>
+</div>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">95.7%</p>
+<div class="flex items-center gap-2">
+<p class="text-[#0bda5b] text-base font-semibold leading-normal">+2.1%</p>
+<p class="text-[#9cabba] text-sm">vs last week</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-[#1F2933] border border-[#2A3B4B] shadow-lg hover:shadow-[#fa6238]/20 transition-shadow">
+<div class="flex items-center justify-between">
+<p class="text-white text-lg font-medium leading-normal">Model Drift</p>
+<span class="material-icons text-[#fa6238]">trending_down</span>
+</div>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">0.18%</p>
+<div class="flex items-center gap-2">
+<p class="text-[#fa6238] text-base font-semibold leading-normal">-0.05%</p>
+<p class="text-[#9cabba] text-sm">vs last week</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-white text-2xl font-semibold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">Feature Importance Shift</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-6">
+<div class="flex flex-col gap-4 rounded-xl border border-[#2A3B4B] bg-[#1F2933] p-6 shadow-lg">
+<p class="text-white text-lg font-medium leading-normal">Current Feature Importance</p>
+<div class="space-y-5 py-3">
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Vibration Level</p>
+<p class="text-[#0b80ee] text-sm font-semibold">90%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#0b80ee] h-2.5 rounded-full" style="width: 90%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Operating Hours</p>
+<p class="text-[#0b80ee] text-sm font-semibold">40%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#0b80ee] h-2.5 rounded-full" style="width: 40%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Fuel Consumption</p>
+<p class="text-[#9cabba] text-sm font-semibold">30%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#60A5FA] h-2.5 rounded-full" style="width: 30%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Engine Temperature</p>
+<p class="text-[#9cabba] text-sm font-semibold">20%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#93C5FD] h-2.5 rounded-full" style="width: 20%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Oil Pressure</p>
+<p class="text-[#9cabba] text-sm font-semibold">20%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#93C5FD] h-2.5 rounded-full" style="width: 20%;"></div></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[#2A3B4B] bg-[#1F2933] p-6 shadow-lg">
+<p class="text-white text-lg font-medium leading-normal">Previous Feature Importance (Last Week)</p>
+<div class="space-y-5 py-3">
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Vibration Level</p>
+<p class="text-[#0b80ee] text-sm font-semibold">80%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#0b80ee] h-2.5 rounded-full" style="width: 80%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Fuel Consumption</p>
+<p class="text-[#0b80ee] text-sm font-semibold">50%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#0b80ee] h-2.5 rounded-full" style="width: 50%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Engine Temperature</p>
+<p class="text-[#9cabba] text-sm font-semibold">20%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#60A5FA] h-2.5 rounded-full" style="width: 20%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Oil Pressure</p>
+<p class="text-[#9cabba] text-sm font-semibold">20%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#60A5FA] h-2.5 rounded-full" style="width: 20%;"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<p class="text-[#E0E0E0] text-sm font-medium">Operating Hours</p>
+<p class="text-[#9cabba] text-sm font-semibold">20%</p>
+</div>
+<div class="w-full bg-[#2A3B4B] rounded-full h-2.5"><div class="bg-[#60A5FA] h-2.5 rounded-full" style="width: 20%;"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-10 py-4 border-t border-solid border-[#2A3B4B] text-center">
+<p class="text-[#9cabba] text-xs">© 2024 Roy Hill. AI-Driven Predictive Maintenance. All rights reserved.</p>
+</footer>
+</div>
+</div>
+
+</body></html>

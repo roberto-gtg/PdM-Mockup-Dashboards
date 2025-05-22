@@ -1,0 +1,239 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Roy Hill Predictive Maintenance</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+      .status-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1rem;
+        text-transform: capitalize;
+      }
+      .status-in-stock {
+        background-color: rgba(11, 218, 91, 0.1);
+        color: #0bda5b;
+      }
+      .status-low-stock {
+        background-color: rgba(255, 165, 0, 0.1);color: #ffa500;}
+      .status-critical {
+        background-color: rgba(255, 0, 0, 0.1);color: #ff0000;}
+    </style>
+</head>
+<body style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif;">
+<div class="relative flex size-full min-h-screen flex-col bg-[#0F172A] dark group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(162,171,179)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex w-72 flex-col border-r border-slate-700 bg-slate-900 p-6">
+<div class="flex flex-col gap-y-8">
+<div class="flex flex-col">
+<h1 class="text-xl font-semibold text-white">Roy Hill</h1>
+<p class="text-sm text-slate-400">Predictive Maintenance</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 hover:bg-slate-800 hover:text-white" href="#">
+<div class="text-slate-300" data-icon="PresentationChart" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Overview</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-slate-800 px-3 py-2.5 text-white" href="#">
+<div class="text-white" data-icon="ChartLine" data-size="24px" data-weight="fill">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM200,176a8,8,0,0,1,0,16H56a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v62.92l34.88-29.07a8,8,0,0,1,9.56-.51l43,28.69,43.41-36.18a8,8,0,0,1,10.24,12.3l-48,40a8,8,0,0,1-9.56.51l-43-28.69L64,155.75V176Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Predictions</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 hover:bg-slate-800 hover:text-white" href="#">
+<div class="text-slate-300" data-icon="Package" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Inventory</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 hover:bg-slate-800 hover:text-white" href="#">
+<div class="text-slate-300" data-icon="Bell" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Alerts</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 hover:bg-slate-800 hover:text-white" href="#">
+<div class="text-slate-300" data-icon="Gear" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1 bg-slate-950 p-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-white">Predictions</h1>
+<p class="text-slate-400">Forecast spare part usage and reorder points for the next 90 days.</p>
+</div>
+<section class="mb-10">
+<h2 class="mb-4 text-xl font-semibold text-white">Spare Part Usage Forecast</h2>
+<div class="mb-6 max-w-xs">
+<label class="sr-only" for="part-category-select">Select Part Category</label>
+<select class="form-input w-full rounded-lg border-slate-700 bg-slate-800 text-white placeholder-slate-400 focus:border-sky-500 focus:ring-sky-500" id="part-category-select">
+<option value="all">All Categories</option>
+<option value="bearings">Bearings</option>
+<option value="filters">Filters</option>
+<option value="pumps">Pumps</option>
+<option value="motors">Motors</option>
+</select>
+</div>
+<div class="rounded-xl border border-slate-700 bg-slate-800 p-6 shadow-lg">
+<p class="text-base font-medium text-white">Predicted Usage</p>
+<p class="text-4xl font-bold text-white">1,200 units</p>
+<div class="mt-1 flex items-center gap-2">
+<p class="text-slate-400">Next 90 Days</p>
+<p class="text-sm font-medium text-green-400">+15%</p>
+</div>
+<div class="mt-6 grid min-h-[200px] grid-flow-col items-end justify-items-center gap-4 px-3 pt-4">
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 60%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part A</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 50%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part B</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 80%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part C</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 60%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part D</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 70%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part E</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 20%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part F</p>
+</div>
+<div class="flex h-full w-full flex-col items-center justify-end">
+<div class="w-4 rounded-t-md bg-sky-500" style="height: 50%;"></div>
+<p class="mt-2 text-xs font-medium text-slate-400">Part G</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="mb-4 text-xl font-semibold text-white">Reorder Points</h2>
+<div class="@container overflow-x-auto rounded-xl border border-slate-700 bg-slate-800 shadow-lg">
+<table class="min-w-full divide-y divide-slate-700">
+<thead class="bg-slate-800">
+<tr>
+<th class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 px-6 py-3.5 text-left text-sm font-semibold text-white" scope="col">Part Name</th>
+<th class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 px-6 py-3.5 text-left text-sm font-semibold text-white" scope="col">Current Stock</th>
+<th class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 px-6 py-3.5 text-left text-sm font-semibold text-white" scope="col">Reorder Point</th>
+<th class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 px-6 py-3.5 text-left text-sm font-semibold text-white" scope="col">Lead Time</th>
+<th class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 px-6 py-3.5 text-left text-sm font-semibold text-white" scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-700 bg-slate-900">
+<tr>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Bearing Model X100</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 whitespace-nowrap px-6 py-4 text-sm text-slate-300">50</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 whitespace-nowrap px-6 py-4 text-sm text-slate-300">20</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 whitespace-nowrap px-6 py-4 text-sm text-slate-300">7 days</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 whitespace-nowrap px-6 py-4 text-sm">
+<span class="status-badge status-in-stock">In Stock</span>
+</td>
+</tr>
+<tr>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Filter Cartridge F20</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 whitespace-nowrap px-6 py-4 text-sm text-slate-300">10</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 whitespace-nowrap px-6 py-4 text-sm text-slate-300">15</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 whitespace-nowrap px-6 py-4 text-sm text-slate-300">14 days</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 whitespace-nowrap px-6 py-4 text-sm">
+<span class="status-badge status-low-stock">Low Stock</span>
+</td>
+</tr>
+<tr>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Hydraulic Pump P5</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 whitespace-nowrap px-6 py-4 text-sm text-slate-300">100</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 whitespace-nowrap px-6 py-4 text-sm text-slate-300">50</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 whitespace-nowrap px-6 py-4 text-sm text-slate-300">3 days</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 whitespace-nowrap px-6 py-4 text-sm">
+<span class="status-badge status-in-stock">In Stock</span>
+</td>
+</tr>
+<tr>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Electric Motor M3K</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 whitespace-nowrap px-6 py-4 text-sm text-slate-300">5</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 whitespace-nowrap px-6 py-4 text-sm text-slate-300">10</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 whitespace-nowrap px-6 py-4 text-sm text-slate-300">21 days</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 whitespace-nowrap px-6 py-4 text-sm">
+<span class="status-badge status-critical">Critical</span>
+</td>
+</tr>
+<tr>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Conveyor Belt B77</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 whitespace-nowrap px-6 py-4 text-sm text-slate-300">75</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 whitespace-nowrap px-6 py-4 text-sm text-slate-300">30</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 whitespace-nowrap px-6 py-4 text-sm text-slate-300">10 days</td>
+<td class="table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 whitespace-nowrap px-6 py-4 text-sm">
+<span class="status-badge status-in-stock">In Stock</span>
+</td>
+</tr>
+</tbody>
+</table>
+<style>
+                  @container (max-width:640px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120,
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240,
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360,
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480,
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 {}
+                  }
+                  @container (max-width:120px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:240px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:360px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:480px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-480 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:600px) {
+                    .table-1f1131f0-f9ac-4691-8cbf-43fa01e16d92-column-600 {
+                      display: none;
+                    }
+                  }
+                </style>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+
+</body></html>
